@@ -4,7 +4,7 @@
 
 ## Overview
 
-Music supervision is the field where musician and filmmakers (and TV) intersect. It is often frought with technilogical issues. Create a website that provides all the necessary information for musicians to get paid and directors to find the right music.
+Music supervision is the field where musician and filmmakers (and TV) intersect. It is often frought with technological issues. Create a website that provides all the necessary information for musicians to get paid and directors to find the right music while pairing music with genre tags.
 
 ## Objectives
 
@@ -41,10 +41,17 @@ Next Steps:
 
 ## Componenet Diagram
 
+```
 ERD:
+```
+
 ![ERD](images/ERD.png)
 
-CHD: [CHD]!(images/CHD.png)
+```
+CHD:
+```
+
+![CHD](images/CHD.png)
 
 ## Links
 
