@@ -6,7 +6,8 @@ const songSchema = new Schema(
     url: { type: String, required: false },
     composer: [
       { type: Schema.Types.ObjectId, ref: 'Composer', required: false }
-    ]
+    ],
+    tag: [{ type: Schema.Types.ObjectId, ref: 'Tag', required: true }]
   },
   { timestamps: true }
 )
