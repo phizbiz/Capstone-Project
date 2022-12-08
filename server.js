@@ -33,11 +33,19 @@ app.post('/songs', async (req, res) => {
   res.send(createdSong)
 })
 
-//delete a song -- SONG
+//delete a song -- DELETE
 // app.delete('/songs/:id')
 
 //COMPOSER ROUTES
-app.post('/composer', async (req, res) => {
+
+//get a composer -- GET
+app.get('/composers', async (req, res) => {
+  let allComposers = await Composer.find({})
+  res.json(allComposers)
+})
+
+//create a composer -- POST
+app.post('/composers', async (req, res) => {
   let createdComposer = await Composer.create(req.body)
   res.send(createdComposer)
 })
