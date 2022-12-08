@@ -3,8 +3,7 @@ const cors = require('cors')
 const logger = require('morgan')
 const PORT = process.env.PORT || 3001
 const db = require('./db')
-const { Song } = require('./models')
-const { Composer } = require('./models')
+const { Song, Composer } = require('./models')
 
 const app = express()
 
@@ -32,7 +31,9 @@ app.get('/songs', async (req, res) => {
 
 //create a song -- POST
 app.post('/songs', async (req, res) => {
-  let createdSong = await Song.create(req.body)
+  let exampleComposerId = '6392420d7c3447e2c4dde294'
+  const requestBody = { ...req.body, composer: exampleComposerId }
+  let createdSong = await Song.create(requestBody)
   res.send(createdSong)
 })
 
