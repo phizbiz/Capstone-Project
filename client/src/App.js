@@ -4,7 +4,7 @@ import Composers from './components/Composers'
 import Home from './components/Home'
 import Songs from './components/Songs'
 import Tags from './components/Tag'
-import UpdateSongs from './components/updateSongs'
+import UpdateSongs from './components/UpdateSongs'
 import Nav from './components/Nav'
 
 function App() {

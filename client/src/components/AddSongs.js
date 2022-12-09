@@ -3,7 +3,7 @@ import axios from 'axios'
 import link from 'react-router-dom'
 import Songs from './Songs'
 
-const UpdateSongsPage = () => {
+const AddSongs = () => {
   const [songs, updateSongs] = useState([])
   const [tags, updateTags] = useState([])
   const [formState, setFormState] = useState({
@@ -122,4 +122,4 @@ const UpdateSongsPage = () => {
     </div>
   )
 }
-export default UpdateSongsPage
+export default AddSongs
