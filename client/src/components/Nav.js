@@ -16,6 +16,8 @@ const Nav = () => {
         <spacer> </spacer>
         <Link to="/addsongs">Add Song</Link>
         <spacer> </spacer>
+        <Link to="/addtags">Add Tags</Link>
+        <spacer> </spacer>
       </div>
     </nav>
   )
