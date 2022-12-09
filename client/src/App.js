@@ -10,13 +10,13 @@ function App() {
     <div className="App">
       <header>
         <ul>
-          <Link to="/">Home</Link>
+          <Link to="/"> Home </Link>
           <spacer> </spacer>
-          <Link to="/songs">Songs</Link>
+          <Link to="/songs"> Songs </Link>
           <spacer> </spacer>
-          <Link to="/composers">Composers</Link>
+          <Link to="/composers"> Composers </Link>
           <spacer> </spacer>
-          <Link to="/tags">Tags</Link>
+          <Link to="/tags"> Tags </Link>
         </ul>
       </header>
       <main>
