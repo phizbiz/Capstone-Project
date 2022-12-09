@@ -40,20 +40,6 @@ const AddSongs = () => {
     setFormState({ name: '', url: '', composer: '', tag: '' })
   }
 
-  const handleUpdate = async (event, id) => {
-    event.preventDefault()
-    let updateSong = await axios
-      .put(`http://localhost:3001/songs/${id}`, formState)
-      .then((response) => {
-        return response
-      })
-      .catch((error) => {
-        console.log(error)
-      })
-    updateSongs([...songs, updateSong.data])
-    setFormState({ name: '', url: '', composer: '', tag: '' })
-  }
-
   return (
     <div className="updateSongs">
       <section>
@@ -73,48 +59,13 @@ const AddSongs = () => {
           <button type="submit">Add Song</button>
         </form>
 
-        <h1>Update Songs Text</h1>
+        <h1>Add Songs Text</h1>
         <div>
           {songs.map((song) => (
             <div key={song._id}>
               <h3>Song: {song.name}</h3>
               <h4>Tags: {song.tag}</h4>
-              <div>
-                <form onSubmit={handleUpdate}>
-                  <label htmlFor="name">Name:</label>
-                  <input
-                    id="name"
-                    value={formState.name}
-                    onChange={handleChange}
-                  />
-                  <label htmlFor="url">URL:</label>
-                  <input
-                    id="url"
-                    value={formState.url}
-                    onChange={handleChange}
-                  />
-                  <label htmlFor="composer">Composer:</label>
-                  <input
-                    id="composer"
-                    value={formState.composer}
-                    onChange={handleChange}
-                  />
-                  <label htmlFor="tag">Tag:</label>
-                  <input
-                    id="tag"
-                    value={formState.tag}
-                    onChange={handleChange}
-                  />
-                </form>
-                <button
-                  onClick={(event) => {
-                    handleUpdate(event, song._id)
-                  }}
-                  type="submit"
-                >
-                  Update Song
-                </button>
-              </div>
+              <div></div>
             </div>
           ))}
         </div>

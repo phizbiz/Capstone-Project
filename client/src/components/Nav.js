@@ -12,7 +12,9 @@ const Nav = () => {
         <spacer> </spacer>
         <Link to="/tags">Tags</Link>
         <spacer> </spacer>
-        <Link to="/updatesongs">Update</Link>
+        <Link to="/updatesongs">Update Song</Link>
+        <spacer> </spacer>
+        <Link to="/addsongs">Add Song</Link>
         <spacer> </spacer>
       </div>
     </nav>
