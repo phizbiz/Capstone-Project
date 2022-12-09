@@ -18,6 +18,8 @@ const Nav = () => {
         <spacer> </spacer>
         <Link to="/addtags">Add Tags</Link>
         <spacer> </spacer>
+        <Link to="/updatetags">Update Tags</Link>
+        <spacer> </spacer>
       </div>
     </nav>
   )

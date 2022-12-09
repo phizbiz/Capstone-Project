@@ -3,11 +3,12 @@ import { Route, Routes, Link } from 'react-router-dom'
 import Composers from './components/Composers'
 import Home from './components/Home'
 import Songs from './components/Songs'
-import Tags from './components/Tag'
+import Tags from './components/Tags'
 import UpdateSongs from './components/UpdateSongs'
 import Nav from './components/Nav'
 import AddSongs from './components/AddSongs'
 import AddTags from './components/AddTags'
+import UpdateTagsPage from './components/UpdateTags'
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="updatesongs" element={<UpdateSongs />} />
           <Route path="addsongs" element={<AddSongs />} />
           <Route path="addtags" element={<AddTags />} />
+          <Route path="updatetags" element={<UpdateTagsPage />} />
         </Routes>
       </main>
     </div>

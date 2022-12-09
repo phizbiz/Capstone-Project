@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import link from 'react-router-dom'
-import Tags from './Tag'
+import Tags from './Tags'
 
 const AddTags = () => {
   const [tags, updateTags] = useState([])
