@@ -36,11 +36,12 @@ const UpdateTagsPage = () => {
   }
 
   return (
-    <div className="updateSongs">
+    <div className="updateSongs" style={{ textAlign: 'center' }}>
       <section>
         <h1>Update Tags</h1>
         <form onSubmit={handleUpdate}>
-          <label htmlFor="name">Name:</label>
+          <h3>Update Tag Name:</h3>
+          <label htmlFor="name"></label>
           <input id="name" value={formState.name} onChange={handleChange} />
         </form>
         <div>

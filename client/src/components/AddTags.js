@@ -50,7 +50,6 @@ const AddTags = () => {
           {tags.map((tag) => (
             <div key={tag._id}>
               <h3>Tag: {tag.name}</h3>
-              <div></div>
             </div>
           ))}
         </div>

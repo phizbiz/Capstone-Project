@@ -64,7 +64,9 @@ const AddSongs = () => {
           {songs.map((song) => (
             <div key={song._id}>
               <h3>Song: {song.name}</h3>
-              <h4>Tags: {song.tag}</h4>
+              <h4>
+                Composer: {song.composer} | Tags: {song.tag}
+              </h4>
               <div></div>
             </div>
           ))}
