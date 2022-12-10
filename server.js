@@ -23,11 +23,17 @@ app.get('/songs', async (req, res) => {
   res.json(allSongs)
 })
 
-//read one song -- GET
+//read one song -- OLD -- GET
 app.get('/songs/:id', async (req, res) => {
-  let oneSong = await Song.findOne({})
+  let oneSong = await Song.findById(req.params.id)
   res.json(oneSong)
 })
+
+//read one song -- NEW -- GET
+// app.get('/songs/:id', async (req, res) => {
+//   let oneSong = await Song.findById(req.params.id).populate('tag')
+//   res.json(oneSong)
+// })
 
 // create album -- NEW -- POST
 app.post('/songs', async (req, res) => {
