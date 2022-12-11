@@ -15,7 +15,7 @@ const TagDetails = () => {
 
   useEffect(() => {
     const getSong = async () => {
-      let response = await axios.get(`/songs/${id}`)
+      let response = await axios.get(`http://localhost:3001/song/${id}`)
       setSongState(response.data)
     }
     getSong()
@@ -24,7 +24,7 @@ const TagDetails = () => {
   return (
     <div className="details">
       <h2>{songState.tag.name}</h2>
-      {/* <h2>{songState.name}</h2> */}
+      <h2>{songState.name}</h2>
     </div>
   )
 }

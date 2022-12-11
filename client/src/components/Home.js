@@ -14,7 +14,7 @@ const Home = () => {
   }, [])
 
   return (
-    <div classname="allTags">
+    <div className="allTags">
       <header>
         <h1>Royal Music Library</h1>
       </header>

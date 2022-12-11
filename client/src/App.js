@@ -11,6 +11,7 @@ import AddTags from './components/AddTags'
 import UpdateTagsPage from './components/UpdateTags'
 import DeleteTags from './components/DeleteTags'
 import TagDetails from './components/TagDetails'
+import SongTags from './components/SongTags'
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
           <Route path="updatetags" element={<UpdateTagsPage />} />
           <Route path="deletetags" element={<DeleteTags />} />
           <Route path="/tagID/:id" element={<TagDetails />} />
+          <Route path="/:id" element={<SongTags />} />
         </Routes>
       </main>
     </div>
