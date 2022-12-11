@@ -22,7 +22,7 @@ const Home = () => {
         <div className="divide">
           {tags.map((tag) => {
             return (
-              <Link to={`/${tag._id}`}>
+              <Link to={`tagID/${tag._id}`}>
                 <div className="tag" key={tag._ID}>
                   <h2>{tag.name}</h2>
                 </div>
