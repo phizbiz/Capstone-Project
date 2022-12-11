@@ -22,6 +22,8 @@ const Songs = () => {
         {songs.map((song) => (
           <div key={song._id}>
             <h2>{song.name}</h2>
+            <a href={song.url}>Link</a>
+            <h4>Composer: {song.composer}</h4>
           </div>
         ))}
       </section>
