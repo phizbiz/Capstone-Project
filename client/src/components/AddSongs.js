@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import axios from 'axios'
 import link from 'react-router-dom'
 import Songs from './Songs'
+import Tags from './Tags'
 
 const AddSongs = () => {
   const [songs, updateSongs] = useState([])
@@ -12,7 +13,7 @@ const AddSongs = () => {
     composer: '',
     tag: '1'
   })
-
+  console.log(songs)
   useEffect(() => {
     const apiCall = async () => {
       let response = await axios.get('http://localhost:3001/songs')

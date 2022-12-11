@@ -89,10 +89,15 @@ app.listen(PORT, () => {
 
 //TAG ROUTES
 
-//get a tag -- GET
+//get all tags -- GET
 app.get('/tags', async (req, res) => {
   let allTags = await Tag.find({})
   res.json(allTags)
+})
+
+app.get('/tags/:id', async (req, res) => {
+  let foundTag = await Tag.findById(req.params.id)
+  res.json(foundTag)
 })
 
 //create a tag -- POST
