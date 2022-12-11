@@ -114,3 +114,11 @@ app.put('/tags/:id', async (req, res) => {
   })
   res.json(updatedTag)
 })
+
+//read songs by tag -- GET
+app.get('/tags/songs/:id', async (res, req) => {
+  const songTag = await Song.find({
+    tag: req.params.tag
+  })
+  res.json(songTag)
+})

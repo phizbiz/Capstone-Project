@@ -10,13 +10,21 @@ const AddSongs = () => {
     name: '',
     url: '',
     composer: '',
-    tag: ''
+    tag: '1'
   })
 
   useEffect(() => {
     const apiCall = async () => {
       let response = await axios.get('http://localhost:3001/songs')
       updateSongs(response.data)
+    }
+    apiCall()
+  }, [])
+
+  useEffect(() => {
+    const apiCall = async () => {
+      let response = await axios.get('http://localhost:3001/tags')
+      updateTags(response.data)
     }
     apiCall()
   }, [])
@@ -37,7 +45,7 @@ const AddSongs = () => {
         console.log(error)
       })
     updateSongs([...songs, newSong.data])
-    setFormState({ name: '', url: '', composer: '', tag: '' })
+    setFormState({ name: '', url: '', composer: '' })
   }
 
   return (
@@ -54,8 +62,16 @@ const AddSongs = () => {
             value={formState.composer}
             onChange={handleChange}
           />
-          <label htmlFor="tag">Tag:</label>
-          <input id="tag" value={formState.tag} onChange={handleChange} />
+          <select id="tag" onChange={handleChange}>
+            <option value="1" placeholder="select">
+              Select
+            </option>
+            {tags.map((songTag) => (
+              <option value={songTag._id} key={songTag._id}>
+                {songTag.name}
+              </option>
+            ))}
+          </select>
           <button type="submit">Add Song</button>
         </form>
 
