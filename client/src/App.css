@@ -1,18 +1,6 @@
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -28,11 +16,90 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+body {
+  /* background: rgba(0, 0, 0, 0.4); */
+  background-image: ("./images/RoyalMusicLibraryBackground.jpg");
+  background-repeat: none;
+  background-size: cover;
+  background-blend-mode: darken;
+
+  object-position: center center;
 }
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ font-size: 12px;
+  padding: .5em;
+  color: white;
+  min-height: 2em;
+  background: black;
+ 
+}
+
+.navbar a {
+  text-decoration: none;
+  position: center;
+  color: white;
+  padding-left: 20px;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  padding: 10 15px;
+  justify-content: center;
+  object-position: center center;
+}
+
+.linky::after {
+  position: absolute;
+  content: " ";
+  background-color: #e09f3e;
+  width: 75%;
+  height: 2px;
+  left: 9px;
+  bottom: -5px;
+
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 250ms ease-in;
+  /* left: 2px; */
+}
+
+.linky:hover::after {
+  transform: scaleX(1);
+}
+
+.delete-btn{
+  padding: 4px 8px;
+  background: #f2e9e4;
+color: black;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.delete-btn:hover{
+  background-color: gray;
+  transition: 0.4s;
+  color: white;
+  }
+
+  .update-btn{
+    padding: 4px 8px;
+    background: #f2e9e4;
+  color: black;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 12px;
+  }
+  
+  .update-btn:hover{
+    background-color: gray;
+    transition: 0.4s;
+    color: white;
+    }

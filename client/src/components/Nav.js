@@ -4,21 +4,37 @@ const Nav = () => {
   return (
     <nav className="navbar">
       <div>
-        <Link to="/">Home</Link>
-        <Link to="/songs">Songs</Link>
+        <Link to="/" className="linky">
+          Home
+        </Link>
+        <Link to="/songs" className="linky">
+          Songs
+        </Link>
 
-        <Link to="/composers">Composers</Link>
+        <Link to="/composers" className="linky">
+          Composers
+        </Link>
 
-        <Link to="/addsongs">Add Song</Link>
+        <Link to="/addsongs" className="linky">
+          Add Song
+        </Link>
 
-        <Link to="/tags">Tags</Link>
+        <Link to="/tags" className="linky">
+          Tags
+        </Link>
 
         {/* <Link to="/updatesongs">Update Song</Link> */}
-        <Link to="/addtags">Add Tags</Link>
+        <Link to="/addtags" className="linky">
+          Add Tags
+        </Link>
 
-        <Link to="/updatetags">Update Tags</Link>
+        <Link to="/updatetags" className="linky">
+          Update Tags
+        </Link>
 
-        <Link to="/deletetags">Delete Tags</Link>
+        <Link to="/deletetags" className="linky">
+          Delete Tags
+        </Link>
       </div>
     </nav>
   )

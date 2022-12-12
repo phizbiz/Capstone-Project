@@ -12,6 +12,7 @@ import UpdateTagsPage from './components/UpdateTags'
 import DeleteTags from './components/DeleteTags'
 import TagDetails from './components/TagDetails'
 import SongTags from './components/SongTags'
+import './App.css'
 
 function App() {
   return (

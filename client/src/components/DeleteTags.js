@@ -45,6 +45,7 @@ const DeleteTags = () => {
           <div key={tag._id}>
             <h3>{tag.name}</h3>
             <button
+              className="delete-btn"
               onClick={(event) => {
                 handleDelete(event, tag._id)
               }}
