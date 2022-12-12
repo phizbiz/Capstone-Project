@@ -144,7 +144,24 @@ color: black;
 }
 
 .tagBox{
-  flex-wrap: 2 10;
+  border: 10;
+  /* outline: thin double white; */
+  /* display: flex; */
+  /* flex-direction: row; */
+  align-items: space-between;
+  /* max-width: 400px; */
+  justify-content: center;
+  /* justify-content: center; */
+  /* height: 70px; */
+  /* border-radius: 5px; */
+  /* background-color:rgba(0, 0, 0, 0.4); */
+  /* margin: 150px; */
+  /* width: 690px; */
+
+}
+
+.tagBox:hover{
+  opacity: 10;
 }
 
 .tag-img{
