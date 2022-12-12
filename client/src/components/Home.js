@@ -24,8 +24,8 @@ const Home = () => {
         <div className="divide">
           {tags.map((tag) => {
             return (
-              <Link to={`tagID/${tag._id}`}>
-                <div className="tagBox" key={tag._ID}>
+              <Link to={`/${tag._id}`}>
+                <div className="tagBox" key={tag._id}>
                   <h2>{tag.name}</h2>
                   <img
                     src="https://i.imgur.com/pDYp0f2.jpg"

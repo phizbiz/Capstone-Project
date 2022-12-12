@@ -31,7 +31,7 @@ function App() {
           <Route path="addtags" element={<AddTags />} />
           <Route path="updatetags" element={<UpdateTagsPage />} />
           <Route path="deletetags" element={<DeleteTags />} />
-          <Route path="/tagID/:id" element={<TagDetails />} />
+          <Route path="/tag/:id" element={<TagDetails />} />
           <Route path="/:id" element={<SongTags />} />
         </Routes>
       </main>

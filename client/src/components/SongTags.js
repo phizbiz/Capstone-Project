@@ -10,8 +10,8 @@ const SongTags = () => {
   let { id } = useParams()
   let navigate = useNavigate()
 
-  const viewSong = (details) => {
-    navigate(`/song/${details}`)
+  const viewSong = (TagDetails) => {
+    navigate(`/song/${TagDetails}`)
   }
 
   useEffect(() => {
@@ -29,6 +29,8 @@ const SongTags = () => {
     }
     apiCall()
   }, [id])
+
+  console.log(SongTags)
 
   return (
     <div>
