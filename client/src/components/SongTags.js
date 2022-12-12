@@ -39,15 +39,16 @@ const SongTags = () => {
       </nav>
       <section className="container-grid">
         {songs.map((song) => (
-          <div
-            key={song._id}
-            className="box"
-            onClick={() => {
-              viewSong(song._id)
-            }}
-          >
+          <div key={song._id} className="box">
             <h2>{song.name}</h2>
             <h3>{song.composer}</h3>
+            <button
+              onClick={() => {
+                viewSong(song._id)
+              }}
+            >
+              View Song
+            </button>
           </div>
         ))}
       </section>

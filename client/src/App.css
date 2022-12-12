@@ -28,11 +28,11 @@ body {
 }
 
 .navbar {
-  display: flex;
+  /* display: flex; */
   justify-content: space-between;
   align-items: center;
  font-size: 12px;
-  padding: .5em;
+  padding: 3em;
   color: white;
   min-height: 2em;
   /* background: black; */
@@ -59,7 +59,7 @@ body {
   content: " ";
   background-color: #e09f3e;
   width: 75%;
-  height: 2px;
+  height: 5px;
   left: 9px;
   bottom: -5px;
 
@@ -140,7 +140,7 @@ color: black;
 
 
 .logo{
-  max-width: 800px;
+  max-width: 700px;
 }
 
 .tagBox{
@@ -152,3 +152,4 @@ color: black;
   border: black;
   flex-wrap: wrap;
 }
+

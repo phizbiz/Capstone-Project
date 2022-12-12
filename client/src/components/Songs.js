@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
-import link from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const Songs = () => {
   const [songs, updateSongs] = useState([])
@@ -16,7 +16,10 @@ const Songs = () => {
   return (
     <div className="Songs">
       <header>
-        <h1>Songs List Text</h1>
+        <h1>Songs</h1>
+        <Link to="/addsongs" className="linky">
+          Add Song
+        </Link>
       </header>
       <section>
         {songs.map((song) => (
