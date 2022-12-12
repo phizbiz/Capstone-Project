@@ -19,6 +19,7 @@ const Home = () => {
         <h1>Royal Music Library</h1>
       </header>
       <section>
+        <h2>Browse by genre...</h2>
         <div className="divide">
           {tags.map((tag) => {
             return (

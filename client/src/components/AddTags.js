@@ -39,13 +39,14 @@ const AddTags = () => {
   return (
     <div className="updateTags">
       <section>
+        <h1>Add Tag...</h1>
         <form onSubmit={handleSubmit}>
           <label htmlFor="name">Name:</label>
           <input id="name" value={formState.name} onChange={handleChange} />
-          <button type="submit">Add Tag</button>
+          <button type="submit" className="add-tag-btn">
+            Add Tag
+          </button>
         </form>
-
-        <h1>Add Tags Text</h1>
         <div>
           {tags.map((tag) => (
             <div key={tag._id}>

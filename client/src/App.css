@@ -84,7 +84,7 @@ color: black;
 
 .delete-btn:hover{
   background-color: gray;
-  transition: 0.4s;
+  transition: 0.1s;
   color: white;
   }
 
@@ -100,6 +100,39 @@ color: black;
   
   .update-btn:hover{
     background-color: gray;
-    transition: 0.4s;
+    transition: 0.1s;
     color: white;
     }
+    
+
+    .add-btn{
+      padding: 4px 8px;
+      background: #f2e9e4;
+    color: black;
+      border: none;
+      border-radius: 7px;
+      cursor: pointer;
+      font-size: 12px;
+    }
+    
+    .add-btn:hover{
+      background-color: gray;
+      transition: 0.1s;
+      color: white;
+      }
+
+      .add-tag-btn{
+        padding: 4px 8px;
+        background: #f2e9e4;
+      color: black;
+        border: none;
+        border-radius: 7px;
+        cursor: pointer;
+        font-size: 12px;
+      }
+      
+      .add-tag-btn:hover{
+        background-color: gray;
+        transition: 0.1s;
+        color: white;
+        }

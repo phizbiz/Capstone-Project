@@ -54,6 +54,7 @@ const UpdateTagsPage = () => {
                     handleUpdate(event, tag._id)
                   }}
                   type="submit"
+                  className="update-btn"
                 >
                   Update Tag
                 </button>

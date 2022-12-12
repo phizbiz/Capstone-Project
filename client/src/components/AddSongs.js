@@ -52,6 +52,7 @@ const AddSongs = () => {
   return (
     <div className="updateSongs">
       <section>
+        <h1>Add Songs...</h1>
         <form onSubmit={handleSubmit}>
           <label htmlFor="name">Name:</label>
           <input id="name" value={formState.name} onChange={handleChange} />
@@ -73,10 +74,11 @@ const AddSongs = () => {
               </option>
             ))}
           </select>
-          <button type="submit">Add Song</button>
+          <button type="submit" className="add-btn">
+            Add Song
+          </button>
         </form>
 
-        <h1>Add Songs Text</h1>
         <div>
           {songs.map((song) => (
             <div key={song._id}>
