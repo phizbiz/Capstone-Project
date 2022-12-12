@@ -2,7 +2,7 @@
   text-align: center;
 }
 .App-header {
-  background-color: #282c34;
+  /* background-color: #282c34; */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -18,11 +18,12 @@
 
 body {
   /* background: rgba(0, 0, 0, 0.4); */
-  background-image: ("./images/RoyalMusicLibraryBackground.jpg");
+  background-image: url("https://i.imgur.com/AcZDktr.jpg");
+  /* background-color: black; */
   background-repeat: none;
   background-size: cover;
   background-blend-mode: darken;
-
+  color: whitesmoke;
   object-position: center center;
 }
 
@@ -34,7 +35,7 @@ body {
   padding: .5em;
   color: white;
   min-height: 2em;
-  background: black;
+  /* background: black; */
  
 }
 
