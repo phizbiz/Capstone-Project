@@ -170,3 +170,6 @@ color: black;
   flex-wrap: wrap;
 }
 
+.composerPhoto{
+  max-width: 150px;
+}

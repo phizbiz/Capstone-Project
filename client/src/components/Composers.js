@@ -21,7 +21,11 @@ const Composers = () => {
       <section>
         {composers.map((composer) => (
           <div key={composer._id}>
+            <img src={composer.image} className="composerPhoto"></img>
             <h2>{composer.name}</h2>
+            <h5>
+              <i>ASCAP: {composer.pro}</i>
+            </h5>
           </div>
         ))}
       </section>
