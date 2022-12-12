@@ -10,8 +10,8 @@ const SongTags = () => {
   let { id } = useParams()
   let navigate = useNavigate()
 
-  const viewSong = (TagDetails) => {
-    navigate(`/song/${TagDetails}`)
+  const viewSong = (tagdetails) => {
+    navigate(`/tag/${tagdetails}`)
   }
 
   useEffect(() => {
@@ -47,6 +47,7 @@ const SongTags = () => {
             }}
           >
             <h2>{song.name}</h2>
+            <h3>{song.composer}</h3>
           </div>
         ))}
       </section>

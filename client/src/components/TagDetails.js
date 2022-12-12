@@ -17,16 +17,17 @@ const TagDetails = () => {
 
   useEffect(() => {
     const getSong = async () => {
-      let response = await axios.get(`http://localhost:3001/tag/${id}`)
+      let response = await axios.get(`http://localhost:3001/songs/${id}`)
       setSongState(response.data)
     }
     getSong()
   }, [])
 
   return (
-    <div className="details" key={songState._id}>
-      {/* <h2>{songState.tag.name}</h2> */}
+    <div className="tagdetails" key={songState._id}>
       <h2>{songState.name}</h2>
+      <a href={songState.url}>Link</a>
+      <h3>{songState.composer}</h3>
     </div>
   )
 }

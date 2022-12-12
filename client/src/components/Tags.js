@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
-import link from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const Tags = () => {
   const [tags, updateTags] = useState([])
@@ -16,7 +16,18 @@ const Tags = () => {
   return (
     <div className="Tags">
       <header>
-        <h1>Tags List Text</h1>
+        <h1>Tags</h1>
+        <Link to="/addtags" className="linky">
+          Add Tags
+        </Link>
+
+        <Link to="/updatetags" className="linky">
+          Update Tags
+        </Link>
+
+        <Link to="/deletetags" className="linky">
+          Delete Tags
+        </Link>
       </header>
       <section>
         {tags.map((tag) => (
