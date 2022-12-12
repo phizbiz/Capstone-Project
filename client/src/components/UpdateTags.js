@@ -51,7 +51,7 @@ const UpdateTagsPage = () => {
           {tags.map((tag) => (
             <div key={tag._id}>
               <h3>Tag: {tag.name}</h3>
-              <img src={tag.image}></img>
+              <img src={tag.image} className="tag-img"></img>
               <div>
                 <button
                   onClick={(event) => {

@@ -194,6 +194,7 @@ body {
 
 .tag-img{
   max-width: 200px;
+  max-height: 200px;
   /* border: black; */
   flex-wrap: wrap;
 }

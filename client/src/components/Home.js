@@ -25,11 +25,8 @@ const Home = () => {
             return (
               <Link to={`/${tag._id}`} className="tagBox">
                 <div key={tag._id}>
+                  <img src={tag.image} className="tag-img"></img>
                   <h2>{tag.name}</h2>
-                  <img
-                    src="https://i.imgur.com/pDYp0f2.jpg"
-                    className="tag-img"
-                  ></img>
                 </div>
               </Link>
             )
