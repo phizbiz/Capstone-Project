@@ -21,12 +21,15 @@ const Songs = () => {
           Add Song
         </Link>
       </header>
-      <section>
+      <section className="songDiv">
         {songs.map((song) => (
-          <div key={song._id}>
+          <div key={song._id} className="songBox">
             <h2>{song.name}</h2>
-            <a href={song.url}>Link</a>
+
             <h4>Composer: {song.composer}</h4>
+            <a href={song.url} className="link-btn">
+              Link
+            </a>
           </div>
         ))}
       </section>

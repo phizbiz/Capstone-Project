@@ -16,8 +16,7 @@ const Home = () => {
   return (
     <div className="allTags">
       <header>
-        {/* <h1>Royal Music Library</h1> */}
-        <img src="https://i.imgur.com/bWtzMn7.png" className="logo"></img>
+        <img src="https://i.imgur.com/HVwIyzh.png" className="logo"></img>
       </header>
       <section>
         <h2>Browse by genre...</h2>

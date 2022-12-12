@@ -6,7 +6,8 @@ import Tags from './Tags'
 const UpdateTagsPage = () => {
   const [tags, updateTags] = useState([])
   const [formState, setFormState] = useState({
-    name: ''
+    name: '',
+    image: ''
   })
 
   useEffect(() => {
@@ -32,7 +33,7 @@ const UpdateTagsPage = () => {
         console.log(error)
       })
     updateTags([...tags, updateTag.data])
-    setFormState({ name: '' })
+    setFormState({ name: '', image: '' })
   }
 
   return (
@@ -43,11 +44,14 @@ const UpdateTagsPage = () => {
           <h3>Update Tag Name:</h3>
           <label htmlFor="name"></label>
           <input id="name" value={formState.name} onChange={handleChange} />
+          <label htmlFor="image"></label>
+          <input id="image" value={formState.image} onChange={handleChange} />
         </form>
         <div>
           {tags.map((tag) => (
             <div key={tag._id}>
               <h3>Tag: {tag.name}</h3>
+              <img src={tag.image}></img>
               <div>
                 <button
                   onClick={(event) => {

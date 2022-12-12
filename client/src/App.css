@@ -54,6 +54,9 @@ body {
   object-position: center center;
 }
 
+.linky{
+  
+}
 .linky::after {
   position: absolute;
   content: " ";
@@ -138,33 +141,51 @@ body {
   color: white;
         }
 
+.link-btn{
+  padding: 4px 8px;
+  background: #f2e9e4;
+  color: black;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 12px;
+}
+.link-btn:hover{
+  background-color: gray;
+  transition: 0.01s;
+  color: white;
+        }
 
 .logo{
-  max-width: 700px;
+  max-width: 500px;
+  mix-width: 200px;
+  /* magin: auto; */
+  margin: 0px 0px 0px 00px;
+  padding: 0px 0px 10px 0px;
+  justify-content: center;
 }
 
 .tagBox{
-  border: 10;
-  /* max-width: 50px; */
-  outline: thin double white;
   display: flex;
-  /* flex-wrap: nowrap; */
-  /* flex-direction: row; */
-  /* align-items: space-between; */
-  
-  /* justify-content: center; */
   justify-content: center;
-  /* height: 70px; */
-  /* border-radius: 5px; */
-  /* background-color:rgba(0, 0, 0, 0.4); */
-  /* margin: 150px; */
-  /* width: 690px; */
-  border: 2px solid;
   padding: 20px; 
   width: 200px;
   justify-items: center;
-  /* resize: vertical; */
-  /* overflow: auto; */
+}
+
+.songDiv{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* padding: 20px 20px 20px 20px;  */
+  /* max-width: 200px; */
+  justify-items: center;
+}
+
+.songBox{
+  /* background-color: aqua; */
+  /* display: flex; */
+  padding: 0px 10px 0px 10px;
 }
 
 .tagBox:hover{
@@ -173,7 +194,7 @@ body {
 
 .tag-img{
   max-width: 200px;
-  border: black;
+  /* border: black; */
   flex-wrap: wrap;
 }
 
@@ -187,5 +208,6 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start;
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
+
