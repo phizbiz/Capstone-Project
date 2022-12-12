@@ -21,11 +21,11 @@ const Home = () => {
       </header>
       <section>
         <h2>Browse by genre...</h2>
-        <div className="divide">
+        <div className="tagDivide">
           {tags.map((tag) => {
             return (
-              <Link to={`/${tag._id}`}>
-                <div className="tagBox" key={tag._id}>
+              <Link to={`/${tag._id}`} className="tagBox">
+                <div key={tag._id}>
                   <h2>{tag.name}</h2>
                   <img
                     src="https://i.imgur.com/pDYp0f2.jpg"

@@ -16,7 +16,7 @@ const Composers = () => {
   return (
     <div className="Composers">
       <header>
-        <h1>Composer List Text</h1>
+        <h1>Composers</h1>
       </header>
       <section>
         {composers.map((composer) => (

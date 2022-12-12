@@ -76,7 +76,7 @@ body {
 .delete-btn{
   padding: 4px 8px;
   background: #f2e9e4;
-color: black;
+  color: black;
   border: none;
   border-radius: 7px;
   cursor: pointer;
@@ -89,53 +89,53 @@ color: black;
   color: white;
   }
 
-  .update-btn{
-    padding: 4px 8px;
-    background: #f2e9e4;
+.update-btn{
+  padding: 4px 8px;
+  background: #f2e9e4;
   color: black;
-    border: none;
-    border-radius: 7px;
-    cursor: pointer;
-    font-size: 12px;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 12px;
   }
   
-  .update-btn:hover{
-    background-color: gray;
-    transition: 0.1s;
-    color: white;
+.update-btn:hover{
+  background-color: gray;
+  transition: 0.1s;
+  color: white;
     }
     
 
-    .add-btn{
-      padding: 4px 8px;
-      background: #f2e9e4;
-    color: black;
-      border: none;
-      border-radius: 7px;
-      cursor: pointer;
-      font-size: 12px;
+.add-btn{
+  padding: 4px 8px;
+  background: #f2e9e4;
+  color: black;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 12px;
     }
     
-    .add-btn:hover{
-      background-color: gray;
-      transition: 0.1s;
-      color: white;
+.add-btn:hover{
+  background-color: gray;
+  transition: 0.1s;
+  color: white;
       }
 
-      .add-tag-btn{
-        padding: 4px 8px;
-        background: #f2e9e4;
-      color: black;
-        border: none;
-        border-radius: 7px;
-        cursor: pointer;
-        font-size: 12px;
+.add-tag-btn{
+  padding: 4px 8px;
+  background: #f2e9e4;
+  color: black;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 12px;
       }
       
-      .add-tag-btn:hover{
-        background-color: gray;
-        transition: 0.1s;
-        color: white;
+.add-tag-btn:hover{
+  background-color: gray;
+  transition: 0.1s;
+  color: white;
         }
 
 
@@ -145,19 +145,26 @@ color: black;
 
 .tagBox{
   border: 10;
-  /* outline: thin double white; */
-  /* display: flex; */
+  /* max-width: 50px; */
+  outline: thin double white;
+  display: flex;
+  /* flex-wrap: nowrap; */
   /* flex-direction: row; */
-  align-items: space-between;
-  /* max-width: 400px; */
-  justify-content: center;
+  /* align-items: space-between; */
+  
   /* justify-content: center; */
+  justify-content: center;
   /* height: 70px; */
   /* border-radius: 5px; */
   /* background-color:rgba(0, 0, 0, 0.4); */
   /* margin: 150px; */
   /* width: 690px; */
-
+  border: 2px solid;
+  padding: 20px; 
+  width: 200px;
+  justify-items: center;
+  /* resize: vertical; */
+  /* overflow: auto; */
 }
 
 .tagBox:hover{
@@ -172,4 +179,13 @@ color: black;
 
 .composerPhoto{
   max-width: 150px;
+}
+
+.tagDivide{
+  height: 50vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  border: 1px solid black;
 }
