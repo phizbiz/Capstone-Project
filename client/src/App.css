@@ -137,3 +137,18 @@ color: black;
         transition: 0.1s;
         color: white;
         }
+
+
+.logo{
+  max-width: 800px;
+}
+
+.tagBox{
+  flex-wrap: 2 10;
+}
+
+.tag-img{
+  max-width: 200px;
+  border: black;
+  flex-wrap: wrap;
+}
