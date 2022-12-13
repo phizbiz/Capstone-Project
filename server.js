@@ -61,6 +61,12 @@ app.delete('/songs/:id', async (req, res) => {
   res.json(deletedSong)
 })
 
+//delete all songs -- DELETE
+app.delete('/songs/all', async (req, res) => {
+  let deleteAllSongs = await Song.deleteMany({})
+  res.json(deleteAllSongs)
+})
+
 //update a song -- PUT
 app.put('/songs/:id', async (req, res) => {
   let updatedSong = await Song.findByIdAndUpdate(req.params.id, req.body, {
@@ -83,8 +89,10 @@ app.post('/composers', async (req, res) => {
   res.send(createdComposer)
 })
 
-app.listen(PORT, () => {
-  console.log(`Express server running on port: ${PORT}`)
+//delete a composer -- DELETE
+app.delete('/composers/:id', async (req, res) => {
+  let deleteComposer = await Composer.findByIdAndDelete(req.params.id)
+  res.send(deleteComposer)
 })
 
 //TAG ROUTES
@@ -95,6 +103,7 @@ app.get('/tags', async (req, res) => {
   res.json(allTags)
 })
 
+//get one tag -- GET
 app.get('/tags/:id', async (req, res) => {
   let foundTag = await Tag.findById(req.params.id)
   res.json(foundTag)
@@ -121,9 +130,15 @@ app.put('/tags/:id', async (req, res) => {
 })
 
 //read songs by tag -- GET
-app.get('/tags/songs/:id', async (res, req) => {
+app.get('/tag/:id', async (req, res) => {
+  // console.log(req.params)
   const songTag = await Song.find({
-    tag: req.params.tag
+    tag: req.params.id
   })
   res.json(songTag)
+})
+
+//Express Server Running
+app.listen(PORT, () => {
+  console.log(`Express server running on port: ${PORT}`)
 })

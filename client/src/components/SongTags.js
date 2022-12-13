@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react'
+// import ReactPlayer from 'react-player'
 import { useParams, useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import Songs from './Songs'
 import Tags from './Tags'
+import ReactPlayer from 'react-player'
 
 const SongTags = () => {
   const [songs, setSong] = useState([])
@@ -42,6 +44,7 @@ const SongTags = () => {
           <div key={song._id} className="box">
             <h2>{song.name}</h2>
             <h3>{song.composer}</h3>
+            <ReactPlayer url={song.url} />
             <button
               onClick={() => {
                 viewSong(song._id)

@@ -29,11 +29,13 @@ const songSchema = new Schema({
     ref: 'Composer',
     required: false
   },
-  tag: {
-    type: String,
-    ref: 'Tag',
-    required: false
-  }
+  tag: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'Tag',
+      required: false
+    }
+  ]
 })
 
 // const songSchema = mongoose.model('song', songSchema)
