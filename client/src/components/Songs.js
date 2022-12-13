@@ -20,6 +20,9 @@ const Songs = () => {
         <Link to="/addsongs" className="linky">
           Add Song
         </Link>
+        <Link to="/updatesongs" classname="linky">
+          Update Song
+        </Link>
       </header>
       <section className="songDiv">
         {songs.map((song) => (

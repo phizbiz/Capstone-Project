@@ -10,7 +10,7 @@ const UpdateSongsPage = () => {
     name: '',
     url: '',
     composer: '',
-    tag: ''
+    tag: '1'
   })
 
   useEffect(() => {
@@ -20,6 +20,14 @@ const UpdateSongsPage = () => {
     }
     apiCall()
   }, [songs])
+
+  useEffect(() => {
+    const apiCall = async () => {
+      let response = await axios.get('http://localhost:3001/tags')
+      updateTags(response.data)
+    }
+    apiCall()
+  }, [])
 
   const handleChange = (event) => {
     setFormState({ ...formState, [event.target.id]: event.target.value })
@@ -54,8 +62,16 @@ const UpdateSongsPage = () => {
             value={formState.composer}
             onChange={handleChange}
           />
-          <label htmlFor="tag">Tag:</label>
-          <input id="tag" value={formState.tag} onChange={handleChange} />
+          <select id="tag" onChange={handleChange}>
+            <option value="1" placeholder="select">
+              Select
+            </option>
+            {tags.map((songTag) => (
+              <option value={songTag._id} key={songTag._id}>
+                {songTag.name}
+              </option>
+            ))}
+          </select>
         </form>
         <div>
           {songs.map((song) => (
