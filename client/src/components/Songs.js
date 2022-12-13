@@ -16,7 +16,7 @@ const Songs = () => {
   return (
     <div className="Songs">
       <header>
-        <h1>Songs</h1>
+        <h1>All Songs</h1>
         <Link to="/addsongs" className="linky">
           Add Song
         </Link>

@@ -238,3 +238,28 @@ body {
 .tagHeader{
   padding: 0px 0px 10px 0px;
 }
+
+
+.songList{
+  /* display: flex; */
+  /* justify-content: center; */
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+  /* align-items: flex-start; */
+}
+
+.soundcloudPlayer{
+display: flex;
+/* position: relative; */
+justify-content: center;
+background: none;
+target: blank;
+}
+
+.container-grid{
+  height: 50vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}

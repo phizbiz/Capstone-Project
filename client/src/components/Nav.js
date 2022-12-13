@@ -8,7 +8,7 @@ const Nav = () => {
           Home
         </Link>
         <Link to="/songs" className="linky">
-          Songs
+          All Songs
         </Link>
         <Link to="/composers" className="linky">
           Composers
