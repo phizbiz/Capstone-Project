@@ -14,13 +14,13 @@ const Songs = () => {
   }, [])
 
   return (
-    <div className="Songs">
-      <header>
-        <h1>All Songs</h1>
-        <Link to="/addsongs" className="linky">
+    <div className="songPage">
+      <h1>All Songs</h1>
+      <header className="tagHeader">
+        <Link to="/addsongs" className="tagLinky">
           Add Song
         </Link>
-        <Link to="/updatesongs" classname="linky">
+        <Link to="/updatesongs" className="tagLinky">
           Update Song
         </Link>
       </header>
