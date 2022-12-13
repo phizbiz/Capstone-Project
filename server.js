@@ -29,31 +29,11 @@ app.get('/songs/:id', async (req, res) => {
   res.json(oneSong)
 })
 
-//read one song -- NEW -- GET
-// app.get('/songs/:id', async (req, res) => {
-//   let oneSong = await Song.findById(req.params.id).populate('tag')
-//   res.json(oneSong)
-// })
-
 // create album -- NEW -- POST
 app.post('/songs', async (req, res) => {
   let createdSong = await Song.create(req.body)
   res.json(createdSong)
 })
-
-//create a song -- OLD -- POST
-// app.post('/songs', async (req, res) => {
-//   let exampleComposerId = '6392420d7c3447e2c4dde294'
-//   // let exampleComposerId = (`/composer/${id}`)
-//   let exampleTagId = '6392993c1cee26af60c83222'
-//   const requestBody = {
-//     ...req.body,
-//     composer: exampleComposerId,
-//     tag: exampleTagId
-//   }
-//   let createdSong = await Song.create(requestBody)
-//   res.send(createdSong)
-// })
 
 //delete a song -- DELETE
 app.delete('/songs/:id', async (req, res) => {
