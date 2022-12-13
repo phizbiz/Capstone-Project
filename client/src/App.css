@@ -242,24 +242,19 @@ body {
 }
 
 .tagLinky{
-   /* display: flex; */
    justify-content: space-between;
    align-items: center;
   font-size: px;
    padding: 3em;
    color: white;
    min-height: 2em;
-   /* background: black; */
   text-decoration: none;
   position: center;
   color: white;
-  /* padding-left: 20px; */
-  /* margin-left: 0.5em; */
-  /* margin-right: 0.5em; */
   font-size: 20px;
   font-weight: 400;
   letter-spacing: 0.5px;
-  /* padding: 10 15px; */
+
   justify-content: center;
   object-position: center center;
 }

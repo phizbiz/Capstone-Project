@@ -14,7 +14,7 @@ const Home = () => {
   }, [])
 
   return (
-    <div className="allTags">
+    <div className="songPage">
       <header>
         <img src="https://i.imgur.com/HVwIyzh.png" className="logo"></img>
       </header>
@@ -31,13 +31,6 @@ const Home = () => {
               </Link>
             )
           })}
-        </div>
-        <div>
-          Pair With Film
-          <img
-            src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-            className="film-img-home"
-          ></img>
         </div>
       </section>
     </div>
