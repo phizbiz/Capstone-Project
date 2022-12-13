@@ -10,6 +10,7 @@ const app = express()
 //middleware
 app.use(express.json())
 app.use(cors())
+app.use(express.static(`${__dirname}/client/build`))
 
 app.get('/', (req, res) => {
   res.send({ msg: 'This route is being hit' })
@@ -116,6 +117,10 @@ app.get('/tag/:id', async (req, res) => {
     tag: req.params.id
   })
   res.json(songTag)
+})
+
+app.get('/*', (req, res) => {
+  res.sendFile(`${__dirname}/client/build/index.html`)
 })
 
 //Express Server Running
