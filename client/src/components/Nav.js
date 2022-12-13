@@ -16,6 +16,9 @@ const Nav = () => {
         <Link to="/tags" className="linky">
           Tags
         </Link>
+        <Link to="/films" className="linky">
+          Pair With Film
+        </Link>
       </div>
     </nav>
   )
