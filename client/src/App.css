@@ -240,26 +240,37 @@ body {
 }
 
 
-.songList{
-  /* display: flex; */
-  /* justify-content: center; */
-  /* display: flex; */
-  /* flex-wrap: wrap; */
-  /* align-items: flex-start; */
-}
+
 
 .soundcloudPlayer{
-display: flex;
+/* display: flex; */
 /* position: relative; */
-justify-content: center;
-background: none;
-target: blank;
+/* justify-content: center; */
+/* background: none; */
+/* target: blank; */
+padding: 10px 0px 0px 0px;
 }
 
 .container-grid{
-  height: 50vh;
+  height: 60vh;
+  min-height: 60vh;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: flex-start;
+  /* align-items: flex-start; */
+}
+
+.songList{
+
+  /* display: flex; */
+  /* justify-content: center; */
+  /* display: flex; */
+  flex-wrap: wrap;
+  /* align-items: flex-start; */padding: 10px 10px 10px 10px;
+}
+
+.mediaPlayerBox{
+  display: flex;
+  justify-content: center;
+  
 }

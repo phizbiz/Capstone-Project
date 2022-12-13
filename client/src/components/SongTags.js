@@ -43,16 +43,7 @@ const SongTags = () => {
         {songs.map((song) => (
           <div key={song._id} className="songList">
             <h2>{song.name}</h2>
-            <h3>{song.composer}</h3>
-            <ReactPlayer
-              url={song.url}
-              className="soundcloudPlayer"
-              // width="70%"
-              height="9%"
-              // scrolling="no"
-              // frameborder="no"
-              // visual="false"
-            />
+            <h4>By: {song.composer}</h4>
             <button
               onClick={() => {
                 viewSong(song._id)
@@ -60,6 +51,22 @@ const SongTags = () => {
             >
               View Song Details
             </button>
+            <div className="mediaPlayerBox">
+              <ReactPlayer
+                url={song.url}
+                className="soundcloudPlayer"
+                // width="60%"
+                // height="20%"
+                width="60px"
+                height="60px"
+                light="https://www.freeiconspng.com/thumbs/button-icon-png/play-button-icon-png-17.png"
+                playing
+                controls
+                // scrolling="no"
+                // frameborder="no"
+                // visual="false"
+              />
+            </div>
           </div>
         ))}
       </section>

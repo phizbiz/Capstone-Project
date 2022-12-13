@@ -50,7 +50,7 @@ const UpdateSongsPage = () => {
   return (
     <div className="updateSongs">
       <section>
-        <h1>Update Songs Text</h1>
+        <h1>Update Songs</h1>
         <form onSubmit={handleUpdate}>
           <label htmlFor="name">Name:</label>
           <input id="name" value={formState.name} onChange={handleChange} />
