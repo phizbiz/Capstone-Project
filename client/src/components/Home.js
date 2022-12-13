@@ -26,7 +26,7 @@ const Home = () => {
               <Link to={`/${tag._id}`} className="tagBox">
                 <div key={tag._id}>
                   <img src={tag.image} className="tag-img"></img>
-                  <h2>{tag.name}</h2>
+                  <h2 className="tagLink">{tag.name}</h2>
                 </div>
               </Link>
             )

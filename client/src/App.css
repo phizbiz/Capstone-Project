@@ -187,10 +187,32 @@ body {
   border-top: #f2e9e4;
 }
 
+.songDivAll{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* padding: 20px 20px 20px 20px;  */
+  /* max-width: 200px; */
+  justify-items: center;
+  /* height: 200px; */
+  width: auto;
+  /* overflow: auto; */
+  padding-bottom: 30px;
+  border-top: #f2e9e4;
+}
+
 .songBox{
   /* background-color: aqua; */
   /* display: flex; */
+  max-width: 300px;
   padding: 0px 10px 0px 10px;
+}
+
+.songBoxAll{
+  /* background-color: aqua; */
+  /* display: flex; */
+  max-width: 300px;
+  padding: 0px 20px 0px 20px;
 }
 
 .tagBox:hover{
@@ -305,3 +327,18 @@ justify-content: center;
   max-height: 200px;
 }
 
+Link:link{
+  color:white
+}
+Link:visited{
+  color:white
+}
+Link:hover{
+  color:gray
+}
+Link:focus{
+  color:white
+}
+Link:active{
+  color:white
+}

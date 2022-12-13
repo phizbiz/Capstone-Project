@@ -24,9 +24,9 @@ const Songs = () => {
           Update Song
         </Link>
       </header>
-      <section className="songDiv">
+      <section className="songDivAll">
         {songs.map((song) => (
-          <div key={song._id} className="songBox">
+          <div key={song._id} className="songBoxAll">
             <h2>{song.name}</h2>
 
             <h4>Composer: {song.composer}</h4>
