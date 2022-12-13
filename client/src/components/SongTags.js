@@ -1,9 +1,6 @@
 import { useEffect, useState } from 'react'
-// import ReactPlayer from 'react-player'
 import { useParams, useNavigate } from 'react-router-dom'
 import axios from 'axios'
-import Songs from './Songs'
-import Tags from './Tags'
 import ReactPlayer from 'react-player'
 
 const SongTags = () => {
@@ -55,16 +52,11 @@ const SongTags = () => {
               <ReactPlayer
                 url={song.url}
                 className="soundcloudPlayer"
-                // width="60%"
-                // height="20%"
                 width="60px"
                 height="60px"
                 light="https://www.freeiconspng.com/thumbs/button-icon-png/play-button-icon-png-17.png"
                 playing
                 controls
-                // scrolling="no"
-                // frameborder="no"
-                // visual="false"
               />
             </div>
           </div>

@@ -1,7 +1,5 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
-import link from 'react-router-dom'
-import Songs from './Songs'
 
 const UpdateSongsPage = () => {
   const [songs, updateSongs] = useState([])

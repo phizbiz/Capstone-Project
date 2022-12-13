@@ -1,6 +1,5 @@
 import React from 'react'
-import ReactPlayer from 'react-player'
-import { Route, Routes, Link } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 import Composers from './components/Composers'
 import Home from './components/Home'
 import Songs from './components/Songs'
@@ -31,7 +30,7 @@ function App() {
           <Route path="songs" element={<Songs />} />
           <Route path="composers" element={<Composers />} />
           <Route path="tags" element={<Tags />} />
-          <Route path="updatesongs" element={<UpdateSongs />} />
+          <Route path="updatesongs" element={<UpdateSongsPage />} />
           <Route path="addsongs" element={<AddSongs />} />
           <Route path="addtags" element={<AddTags />} />
           <Route path="updatetags" element={<UpdateTagsPage />} />
