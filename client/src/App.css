@@ -180,6 +180,11 @@ body {
   /* padding: 20px 20px 20px 20px;  */
   /* max-width: 200px; */
   justify-items: center;
+  height: 200px;
+  width: auto;
+  overflow: auto;
+  padding-bottom: 30px;
+  border-top: #f2e9e4;
 }
 
 .songBox{
@@ -239,9 +244,6 @@ body {
   padding: 0px 0px 10px 0px;
 }
 
-
-
-
 .soundcloudPlayer{
 /* display: flex; */
 /* position: relative; */
@@ -250,6 +252,15 @@ body {
 /* target: blank; */
 padding: 10px 0px 0px 0px;
 }
+
+.soundcloudPlayerFilm{
+  display: flex;
+  /* position: relative; */
+  /* justify-content: center; */
+  /* background: none; */
+  /* target: blank; */
+  padding: 10px 10px 10px 10px;
+  }
 
 .container-grid{
   height: 60vh;
@@ -260,6 +271,17 @@ padding: 10px 0px 0px 0px;
   /* align-items: flex-start; */
 }
 
+.filmPage{
+display: flex;
+justify-content: center;
+
+}
+
+.filmPlayer{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 .songList{
   /* display: flex; */
   /* justify-content: center; */
@@ -271,5 +293,15 @@ padding: 10px 0px 0px 0px;
 .mediaPlayerBox{
   display: flex;
   justify-content: center;
-  
 }
+
+.filmDiv{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.film-img{
+  max-width: 300px;
+  max-height: 200px;
+}
+

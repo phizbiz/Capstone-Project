@@ -13,6 +13,10 @@ import UpdateTagsPage from './components/UpdateTags'
 import DeleteTags from './components/DeleteTags'
 import TagDetails from './components/TagDetails'
 import SongTags from './components/SongTags'
+import Films from './components/Films'
+import FilmsAction from './components/FilmsAction'
+import FilmsDance from './components/FilmsDance'
+import FilmsRomance from './components/FilmsRomance'
 import './App.css'
 
 function App() {
@@ -34,6 +38,10 @@ function App() {
           <Route path="deletetags" element={<DeleteTags />} />
           <Route path="/tag/:id" element={<TagDetails />} />
           <Route path="/:id" element={<SongTags />} />
+          <Route path="/films" element={<Films />} />
+          <Route path="/action" element={<FilmsAction />} />
+          <Route path="/dance" element={<FilmsDance />} />
+          <Route path="/romance" element={<FilmsRomance />} />
         </Routes>
       </main>
     </div>
