@@ -254,9 +254,24 @@ body {
   font-size: 20px;
   font-weight: 400;
   letter-spacing: 0.5px;
-
   justify-content: center;
   object-position: center center;
+}
+.tagLinkyFilm{
+  /* justify-content: space-between; */
+  /* align-items: center; */
+ /* font-size: px; */
+  /* padding: 3em; */
+  color: white;
+  /* min-height: 2em; */
+ text-decoration: none;
+ position: center;
+ color: white;
+ font-size: 20px;
+ font-weight: 400;
+ letter-spacing: 0.5px;
+ justify-content: center;
+ object-position: center center;
 }
 
 .tagHeader{
@@ -293,7 +308,7 @@ padding: 10px 0px 0px 0px;
 .filmPage{
 display: flex;
 justify-content: center;
-
+/* max-width: 300px; */
 }
 
 .filmPlayer{
@@ -315,9 +330,10 @@ justify-content: center;
 }
 
 .filmDiv{
-  display: flex;
+  /* display: flex; */
   flex-wrap: wrap;
   justify-content: center;
+  /* max-width: 300px; */
 }
 .film-img{
   max-width: 300px;
