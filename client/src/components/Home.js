@@ -19,14 +19,14 @@ const Home = () => {
         <img src="https://i.imgur.com/HVwIyzh.png" className="logo"></img>
       </header>
       <section>
-        <h2>Browse by genre...</h2>
+        <h2 className="homeSubHeader">Browse by genre...</h2>
         <div className="tagDivide">
           {tags.map((tag) => {
             return (
               <Link to={`/${tag._id}`} className="tagLinkyHome">
                 <div key={tag._id}>
                   <img src={tag.image} className="tag-img"></img>
-                  <h2 className="tagLink">{tag.name}</h2>
+                  <h3 className="tagLink">{tag.name}</h3>
                 </div>
               </Link>
             )

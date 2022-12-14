@@ -3,20 +3,20 @@ import { Link } from 'react-router-dom'
 const Nav = () => {
   return (
     <nav className="navbar">
-      <div>
-        <Link to="/" className="linky">
+      <div className="navLinks">
+        <Link to="/" className="navLinky">
           Home
         </Link>
-        <Link to="/songs" className="linky">
+        <Link to="/songs" className="navLinky">
           All Songs
         </Link>
-        <Link to="/composers" className="linky">
+        <Link to="/composers" className="navLinky">
           Composers
         </Link>
-        <Link to="/tags" className="linky">
+        <Link to="/tags" className="navLinky">
           Tags
         </Link>
-        <Link to="/films" className="linky">
+        <Link to="/films" className="navLinky">
           Pair With Film
         </Link>
       </div>

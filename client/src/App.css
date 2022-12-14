@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 .App {
   text-align: center;
 }
@@ -27,6 +29,8 @@ body {
   padding: 3em;
   color: white;
   min-height: 2em;
+    font-family: 'Roboto', sans-serif;
+  
 }
 
 .navbar a {
@@ -44,9 +48,6 @@ body {
   object-position: center center;
 }
 
-.linky{
-  
-}
 .linky::after {
   position: absolute;
   content: " ";
@@ -165,8 +166,6 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  /* padding: 20px 20px 20px 20px;  */
-  /* max-width: 200px; */
   justify-items: center;
   height: 200px;
   width: auto;
@@ -179,28 +178,18 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  /* padding: 0px 800px 0px 800px;  */
- 
   justify-items: center;
-   /* max-width: 800px; */
-  /* height: 200px; */
   width: auto;
-  /* overflow: auto; */
   padding-bottom: 30px;
-  /* padding-left: 150px; */
   border-top: #f2e9e4;
 }
 
 .songBox{
-  /* background-color: aqua; */
-  /* display: flex; */
   max-width: 300px;
   padding: 0px 10px 0px 10px;
 }
 
 .songBoxAll{
-  /* background-color: aqua; */
-  /* display: flex; */
   max-width: 300px;
   padding: 0px 20px 0px 20px;
 }
@@ -212,12 +201,15 @@ body {
 .tag-img{
   max-width: 200px;
   max-height: 200px;
-  /* border: black; */
+  border-radius: 10%;
+  box-shadow: 7px 9px 3px black;
   flex-wrap: wrap;
 }
 
 .composerPhoto{
   max-width: 150px;
+  border-radius: 15%;
+  box-shadow: 5px 8px 5px black;
 }
 
 .tagDivide{
@@ -226,14 +218,13 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start;
-  /* border: 1px solid black; */
 }
 
 .tagLinky{
    justify-content: space-between;
    align-items: center;
   font-size: px;
-   padding: 3em;
+   padding: 5px;
    color: white;
    min-height: 2em;
   text-decoration: none;
@@ -244,14 +235,11 @@ body {
   letter-spacing: 0.5px;
   justify-content: center;
   object-position: center center;
+    font-family: 'Roboto', sans-serif;
+
 }
 .tagLinkyFilm{
-  /* justify-content: space-between; */
-  /* align-items: center; */
- /* font-size: px; */
-  /* padding: 3em; */
   color: white;
-  /* min-height: 2em; */
  text-decoration: none;
  position: center;
  color: white;
@@ -263,24 +251,18 @@ body {
 }
 
 .tagHeader{
-  padding: 0px 0px 10px 0px;
+  padding: 0px 0px 30px 0px;
+  border: 2px;
 }
 
 .soundcloudPlayer{
-/* display: flex; */
-/* position: relative; */
-/* justify-content: center; */
-/* background: none; */
-/* target: blank; */
 padding: 10px 0px 0px 0px;
+box-shadow: 7px 9px 3px black;
+
 }
 
 .soundcloudPlayerFilm{
   display: flex;
-  /* position: relative; */
-  /* justify-content: center; */
-  /* background: none; */
-  /* target: blank; */
   padding: 10px 10px 10px 10px;
   }
 
@@ -290,13 +272,12 @@ padding: 10px 0px 0px 0px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  /* align-items: flex-start; */
 }
 
 .filmPage{
 display: flex;
 justify-content: center;
-/* max-width: 300px; */
+
 }
 
 .filmPlayer{
@@ -305,11 +286,8 @@ justify-content: center;
   flex-wrap: wrap;
 }
 .songList{
-  /* display: flex; */
-  /* justify-content: center; */
-  /* display: flex; */
   flex-wrap: wrap;
-  /* align-items: flex-start; */padding: 10px 10px 10px 10px;
+  padding: 10px 10px 10px 10px;
 }
 
 .mediaPlayerBox{
@@ -319,14 +297,15 @@ justify-content: center;
 }
 
 .filmDiv{
-  /* display: flex; */
   flex-wrap: wrap;
   justify-content: center;
-  /* max-width: 300px; */
 }
 .film-img{
   max-width: 300px;
   max-height: 200px;
+  border-radius: 5%;
+  border-radius: 10%;
+  box-shadow: 7px 9px 3px black;
 }
 
 .tagLinkyHome{
@@ -345,19 +324,62 @@ justify-content: center;
  letter-spacing: 0.5px;
  justify-content: center;
  object-position: center center;
- /* padding-bottom: 100px; */
-
-
 }
 
-/* .songPage{
-  display: flex;
-  justify-content: center;
-  max-width: 500px;
-} */
-
 .songList{
-  list-style-type: none; /* Remove bullets */
-  padding: 0; /* Remove padding */
-  margin: 0; /* Remove margins */
+  list-style-type: none; 
+  padding: 0; 
+  margin: 0; 
+}
+
+.tag-title{
+  font-size: 70px;
+  font-weight: 600;
+  font-family: 'Roboto', sans-serif;
+  color: #b393d3;
+  text-transform: uppercase;
+}
+
+.tagLink{
+  font-size: 30px;
+  font-weight: 600;
+  font-family: 'Roboto', sans-serif;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+
+
+h1{
+  font-size: 50px;
+  font-weight: 600;
+  font-family: 'Roboto', sans-serif;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 0px #361656,
+  1px 2px 0px #361656,
+  1px 3px 0px #361656,
+  1px 4px 0px #361656,
+  1px 5px 0px #361656,
+  1px 6px 0px #361656,
+  1px 10px 5px rgba(16, 16, 16, 0.5),
+  1px 15px 10px rgba(16, 16, 16, 0.4),
+  1px 20px 30px rgba(16, 16, 16, 0.3),
+  1px 25px 50px rgba(16, 16, 16, 0.2);
+}
+
+h2{
+  font-family: 'Roboto', sans-serif;
+}
+
+h3{
+  font-family: 'Roboto', sans-serif;
+}
+
+.homeSubHeader{
+  font-size: 30px;
+  font-weight: 600;
+  font-family: 'Roboto', sans-serif;
+  color: #ffffff;
+  text-transform: uppercase;
 }

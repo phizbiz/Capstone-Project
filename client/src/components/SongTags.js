@@ -34,7 +34,7 @@ const SongTags = () => {
   return (
     <div>
       <nav>
-        <h2 className="tag-title">{tag.name}</h2>
+        <h1>{tag.name}</h1>
       </nav>
       <section className="container-grid">
         <ul className="songList">

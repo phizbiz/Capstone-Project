@@ -21,9 +21,6 @@ const Songs = () => {
         <Link to="/addsongs" className="tagLinky">
           <b>Add Song</b>
         </Link>
-        {/* <Link to="/updatesongs" className="tagLinky">
-          Update Song
-        </Link> */}
       </header>
       <section className="songDivAll">
         <ul className="songList">
