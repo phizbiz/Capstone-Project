@@ -41,10 +41,10 @@ const UpdateTagsPage = () => {
       <section>
         <h1>Update Tags</h1>
         <form onSubmit={handleUpdate}>
-          <h3>Update Tag Name:</h3>
-          <label htmlFor="name"></label>
+          <h3>Update Tag:</h3>
+          <label htmlFor="name">Name: </label>
           <input id="name" value={formState.name} onChange={handleChange} />
-          <label htmlFor="image"></label>
+          <label htmlFor="image">Image Url: </label>
           <input id="image" value={formState.image} onChange={handleChange} />
         </form>
         <div>
