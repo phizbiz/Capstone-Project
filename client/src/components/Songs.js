@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
+import ReactPlayer from 'react-player'
 
 const Songs = () => {
   const [songs, updateSongs] = useState([])
@@ -18,23 +19,32 @@ const Songs = () => {
       <h1>All Songs</h1>
       <header className="tagHeader">
         <Link to="/addsongs" className="tagLinky">
-          Add Song
+          <b>Add Song</b>
         </Link>
         {/* <Link to="/updatesongs" className="tagLinky">
           Update Song
         </Link> */}
       </header>
       <section className="songDivAll">
-        {songs.map((song) => (
-          <div key={song._id} className="songBoxAll">
-            <h2>{song.name}</h2>
+        <ul className="songList">
+          <li>
+            {songs.map((song) => (
+              <div key={song._id} className="songBoxAll">
+                <h2>{song.name}</h2>
 
-            <h4>Composer: {song.composer}</h4>
-            <a href={song.url} className="link-btn">
-              Link
-            </a>
-          </div>
-        ))}
+                <h4>Composer: {song.composer}</h4>
+                <div className="mediaPlayerBox">
+                  <ReactPlayer
+                    url={song.url}
+                    className="soundcloudPlayer"
+                    width="100%"
+                    height="50%"
+                  />
+                </div>
+              </div>
+            ))}
+          </li>
+        </ul>
       </section>
     </div>
   )

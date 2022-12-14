@@ -2,7 +2,6 @@
   text-align: center;
 }
 .App-header {
-  /* background-color: #282c34; */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -12,14 +11,8 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
 body {
-  /* background: rgba(0, 0, 0, 0.4); */
   background-image: url("https://i.imgur.com/AcZDktr.jpg");
-  /* background-color: black; */
   background-repeat: none;
   background-size: cover;
   background-blend-mode: darken;
@@ -28,15 +21,12 @@ body {
 }
 
 .navbar {
-  /* display: flex; */
   justify-content: space-between;
   align-items: center;
  font-size: 12px;
   padding: 3em;
   color: white;
   min-height: 2em;
-  /* background: black; */
- 
 }
 
 .navbar a {
@@ -65,11 +55,9 @@ body {
   height: 5px;
   left: 9px;
   bottom: -5px;
-
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 250ms ease-in;
-  /* left: 2px; */
 }
 
 .linky:hover::after {
@@ -159,10 +147,10 @@ body {
 .logo{
   max-width: 500px;
   mix-width: 200px;
-  /* magin: auto; */
   margin: 0px 0px 0px 00px;
   padding: 0px 0px 10px 0px;
   justify-content: center;
+  object-fit: scale-down;
 }
 
 .tagBox{
@@ -327,6 +315,7 @@ justify-content: center;
 .mediaPlayerBox{
   display: flex;
   justify-content: center;
+  object-fit: scale-down;
 }
 
 .filmDiv{
@@ -364,3 +353,9 @@ justify-content: center;
   justify-content: center;
   max-width: 500px;
 } */
+
+.songList{
+  list-style-type: none; /* Remove bullets */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margins */
+}
