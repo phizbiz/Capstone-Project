@@ -2,6 +2,9 @@
   "name": "capstone-project",
   "version": "1.0.0",
   "description": "![royal music library logo](images/Royal-Music-Library.png)",
+  "engines": {
+    "node": "19.2.0"
+  },
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
