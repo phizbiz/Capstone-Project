@@ -12,7 +12,7 @@ const DeleteTags = () => {
 
   useEffect(() => {
     const apiCall = async () => {
-      let response = await axios.get('http://localhost:3001/tags')
+      let response = await axios.get('/tags')
       updateTags(response.data)
     }
     apiCall()
@@ -25,7 +25,7 @@ const DeleteTags = () => {
   const handleDelete = async (event, id) => {
     event.preventDefault()
     let deleteTag = await axios
-      .delete(`http://localhost:3001/tags/${id}`)
+      .delete(`/tags/${id}`)
       .then((response) => {
         return response
       })

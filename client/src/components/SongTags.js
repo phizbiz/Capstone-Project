@@ -15,7 +15,7 @@ const SongTags = () => {
 
   useEffect(() => {
     const apiCall = async () => {
-      let response = await axios.get(`http://localhost:3001/tag/${id}`)
+      let response = await axios.get(`/tag/${id}`)
       setSong(response.data)
     }
     apiCall()
@@ -23,7 +23,7 @@ const SongTags = () => {
 
   useEffect(() => {
     const apiCall = async () => {
-      let response = await axios.get(`http://localhost:3001/tags/${id}`)
+      let response = await axios.get(`/tags/${id}`)
       setTag(response.data)
     }
     apiCall()

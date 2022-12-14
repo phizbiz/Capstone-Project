@@ -7,7 +7,7 @@ const Tags = () => {
 
   useEffect(() => {
     const apiCall = async () => {
-      let response = await axios.get('http://localhost:3001/tags')
+      let response = await axios.get('/tags')
       updateTags(response.data)
     }
     apiCall()

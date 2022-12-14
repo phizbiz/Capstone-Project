@@ -8,7 +8,7 @@ const FilmsDance = () => {
 
   useEffect(() => {
     const apiCall = async () => {
-      let response = await axios.get('http://localhost:3001/songs')
+      let response = await axios.get('/songs')
       updateSongs(response.data)
     }
     apiCall()

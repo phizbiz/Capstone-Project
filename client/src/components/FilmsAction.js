@@ -8,7 +8,7 @@ const FilmsAction = () => {
 
   useEffect(() => {
     const apiCall = async () => {
-      let response = await axios.get('http://localhost:3001/songs')
+      let response = await axios.get('/songs')
       updateSongs(response.data)
     }
     apiCall()
@@ -30,14 +30,6 @@ const FilmsAction = () => {
                 className="soundcloudPlayerFilm"
                 width="60%"
                 height="20%"
-                // width="60px"
-                // height="60px"
-                // light="https://www.freeiconspng.com/thumbs/button-icon-png/play-button-icon-png-17.png"
-                // playing
-                // controls
-                // scrolling="no"
-                // frameborder="no"
-                // visual="false"
               />
             </div>
           </div>

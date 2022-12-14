@@ -12,7 +12,7 @@ const UpdateTagsPage = () => {
 
   useEffect(() => {
     const apiCall = async () => {
-      let response = await axios.get('http://localhost:3001/tags')
+      let response = await axios.get('/tags')
       updateTags(response.data)
     }
     apiCall()
@@ -25,7 +25,7 @@ const UpdateTagsPage = () => {
   const handleUpdate = async (event, id) => {
     event.preventDefault()
     let updateTag = await axios
-      .put(`http://localhost:3001/tags/${id}`, formState)
+      .put(`/tags/${id}`, formState)
       .then((response) => {
         return response
       })

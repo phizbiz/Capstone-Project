@@ -7,7 +7,7 @@ const Composers = () => {
 
   useEffect(() => {
     const apiCall = async () => {
-      let response = await axios.get('http://localhost:3001/composers')
+      let response = await axios.get('/composers')
       updateComposers(response.data)
     }
     apiCall()

@@ -17,7 +17,7 @@ const TagDetails = () => {
 
   useEffect(() => {
     const getSong = async () => {
-      let response = await axios.get(`http://localhost:3001/songs/${id}`)
+      let response = await axios.get(`/songs/${id}`)
       setSongState(response.data)
     }
     getSong()

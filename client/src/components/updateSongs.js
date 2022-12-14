@@ -13,7 +13,7 @@ const UpdateSongs = () => {
 
   useEffect(() => {
     const apiCall = async () => {
-      let response = await axios.get('http://localhost:3001/songs')
+      let response = await axios.get('/songs')
       updateSongs(response.data)
     }
     apiCall()
@@ -21,7 +21,7 @@ const UpdateSongs = () => {
 
   useEffect(() => {
     const apiCall = async () => {
-      let response = await axios.get('http://localhost:3001/tags')
+      let response = await axios.get('/tags')
       updateTags(response.data)
     }
     apiCall()
@@ -34,7 +34,7 @@ const UpdateSongs = () => {
   const handleUpdate = async (event, id) => {
     event.preventDefault()
     let updateSong = await axios
-      .put(`http://localhost:3001/songs/${id}`, formState)
+      .put(`/songs/${id}`, formState)
       .then((response) => {
         return response
       })

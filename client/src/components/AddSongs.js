@@ -16,7 +16,7 @@ const AddSongs = () => {
   console.log(songs)
   useEffect(() => {
     const apiCall = async () => {
-      let response = await axios.get('http://localhost:3001/songs')
+      let response = await axios.get('/songs')
       updateSongs(response.data)
     }
     apiCall()
@@ -24,7 +24,7 @@ const AddSongs = () => {
 
   useEffect(() => {
     const apiCall = async () => {
-      let response = await axios.get('http://localhost:3001/tags')
+      let response = await axios.get('/tags')
       updateTags(response.data)
     }
     apiCall()
@@ -38,7 +38,7 @@ const AddSongs = () => {
     event.preventDefault()
     console.log(formState)
     let newSong = await axios
-      .post('http://localhost:3001/songs', formState)
+      .post('/songs', formState)
       .then((response) => {
         return response
       })
