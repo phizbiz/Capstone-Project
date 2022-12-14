@@ -37,30 +37,25 @@ const SongTags = () => {
         <h2 className="tag-title">{tag.name}</h2>
       </nav>
       <section className="container-grid">
-        {songs.map((song) => (
-          <div key={song._id} className="songList">
-            <h2>{song.name}</h2>
-            <h4>By: {song.composer}</h4>
-            <button
-              onClick={() => {
-                viewSong(song._id)
-              }}
-            >
-              View Song Details
-            </button>
-            <div className="mediaPlayerBox">
-              <ReactPlayer
-                url={song.url}
-                className="soundcloudPlayer"
-                width="60px"
-                height="60px"
-                light="https://www.freeiconspng.com/thumbs/button-icon-png/play-button-icon-png-17.png"
-                playing
-                controls
-              />
-            </div>
-          </div>
-        ))}
+        <ul className="songList">
+          <li>
+            {songs.map((song) => (
+              <div key={song._id} className="songBoxAll">
+                <h2>{song.name}</h2>
+
+                <h4>Composer: {song.composer}</h4>
+                <div className="mediaPlayerBox">
+                  <ReactPlayer
+                    url={song.url}
+                    className="soundcloudPlayer"
+                    width="100%"
+                    height="50%"
+                  />
+                </div>
+              </div>
+            ))}
+          </li>
+        </ul>
       </section>
     </div>
   )
