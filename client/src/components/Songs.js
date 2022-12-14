@@ -20,9 +20,9 @@ const Songs = () => {
         <Link to="/addsongs" className="tagLinky">
           Add Song
         </Link>
-        <Link to="/updatesongs" className="tagLinky">
+        {/* <Link to="/updatesongs" className="tagLinky">
           Update Song
-        </Link>
+        </Link> */}
       </header>
       <section className="songDivAll">
         {songs.map((song) => (
