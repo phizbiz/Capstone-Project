@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 
-const UpdateSongsPage = () => {
+const UpdateSongs = () => {
   const [songs, updateSongs] = useState([])
   const [tags, updateTags] = useState([])
   const [formState, setFormState] = useState({
@@ -46,7 +46,7 @@ const UpdateSongsPage = () => {
   }
 
   return (
-    <div className="updateSongs">
+    <div className="updateSongsDiv">
       <section>
         <h1>Update Songs</h1>
         <form onSubmit={handleUpdate}>
@@ -95,4 +95,4 @@ const UpdateSongsPage = () => {
     </div>
   )
 }
-export default UpdateSongsPage
+export default UpdateSongs
