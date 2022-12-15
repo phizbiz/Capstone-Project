@@ -36,13 +36,31 @@ Next Steps:
 -Use Insomnia to ensure successful connection
 -Employ React forms
 -Make sure React forms are working and the objects are being updated via CRUD
--Add albums reviews to your hearts content
+-Create associations between models
+-Add songs, tags, and composers
+-Homepage should navigate to different genres. It should look like...
 ```
 
+![Homepage](images/Homepage.png)
+
+## Post-MVP
+
+```js
+-Add API of choice
+-Create a page that matches video and audio. Looking something like this...
+```
+
+![Post-MVP](images/VideoPair.png)
+
+```
 ## Componenet Diagram
 
 ```
+
 ERD:
+
+```
+
 ```
 
 ![ERD](images/ERD.png)
