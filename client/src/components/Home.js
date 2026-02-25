@@ -1,9 +1,11 @@
 import axios from 'axios'
 import { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 const Home = () => {
   const [tags, updateTags] = useState([])
+  const [searchTerm, setSearchTerm] = useState('')
+  const navigate = useNavigate()
 
   useEffect(() => {
     const api = async () => {
@@ -13,26 +15,40 @@ const Home = () => {
     api()
   }, [])
 
+  const handleSearch = (e) => {
+    e.preventDefault()
+    if (searchTerm.trim()) {
+      navigate(`/songs?q=${encodeURIComponent(searchTerm.trim())}`)
+    }
+  }
+
   return (
-    <div className="songPage">
-      <header>
-        <img src="https://i.imgur.com/HVwIyzh.png" className="logo"></img>
-      </header>
-      <section>
-        <h2 className="homeSubHeader">Browse by genre...</h2>
-        <div className="tagDivide">
-          {tags.map((tag) => {
-            return (
-              <Link to={`/${tag._id}`} className="tagLinkyHome">
-                <div key={tag._id}>
-                  <img src={tag.image} className="tag-img"></img>
-                  <h3 className="tagLink">{tag.name}</h3>
-                </div>
-              </Link>
-            )
-          })}
+    <div>
+      <div className="hero">
+        <h1>🎵 Royal Music Library</h1>
+        <p>Discover music for every moment</p>
+        <form onSubmit={handleSearch} className="search-form">
+          <input
+            type="text"
+            placeholder="Search songs or composers..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            className="search-input"
+          />
+          <button type="submit" className="search-btn">Search</button>
+        </form>
+      </div>
+      <div className="page">
+        <p className="section-label">Browse by Genre</p>
+        <div className="tag-grid">
+          {tags.map((tag) => (
+            <Link to={`/${tag._id}`} className="tag-card" key={tag._id}>
+              <img src={tag.image} className="tag-img" alt={tag.name} />
+              <span className="tag-card-name">{tag.name}</span>
+            </Link>
+          ))}
         </div>
-      </section>
+      </div>
     </div>
   )
 }

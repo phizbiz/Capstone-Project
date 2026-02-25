@@ -13,28 +13,38 @@ const FilmsRomance = () => {
     }
     apiCall()
   }, [])
-  return (
-    <div className="FilmPage">
-      <h1>Romance</h1>
-      <div className="filmPlayer">
-        <ReactPlayer url="https://www.youtube.com/watch?v=3lvNGhBXTU0" />
-      </div>
 
-      <section className="songDiv">
-        {songs.map((song) => (
-          <div key={song._id} className="songBox">
-            <h2>{song.name}</h2>
-            <div className="mediaPlayerBox">
-              <ReactPlayer
-                url={song.url}
-                className="soundcloudPlayerFilm"
-                width="60%"
-                height="20%"
-              />
-            </div>
+  return (
+    <div className="page">
+      <div className="film-detail-header">
+        <Link to="/films" className="back-link">← Back to films</Link>
+        <h1>Romance: <em>Eternal Sunshine of the Spotless Mind</em></h1>
+        <p style={{ color: 'var(--text-muted)', marginTop: '0.25rem' }}>
+          Pair music from our library with this iconic romantic scene
+        </p>
+      </div>
+      <div className="film-detail-layout">
+        <div className="film-video-col">
+          <div className="film-video-wrapper">
+            <ReactPlayer
+              url="https://www.youtube.com/watch?v=3lvNGhBXTU0"
+              width="100%"
+              height="100%"
+              controls
+            />
           </div>
-        ))}
-      </section>
+        </div>
+        <div className="film-songs-col">
+          <p className="film-songs-label">Library — {songs.length} songs</p>
+          {songs.map((song) => (
+            <div key={song._id} className="film-song-card">
+              <h3>{song.name}</h3>
+              {song.composer && <p className="composer">{song.composer}</p>}
+              <ReactPlayer url={song.url} width="100%" height="60px" />
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   )
 }

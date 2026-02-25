@@ -14,29 +14,26 @@ const Tags = () => {
   }, [])
 
   return (
-    <div className="tagPage">
-      <header className="tagHeader">
-        <h1>Tags</h1>
-        <Link to="/addtags" className="tagLinky">
-          Add Tags
-        </Link>
-
-        <Link to="/updatetags" className="tagLinky">
-          Update Tags
-        </Link>
-
-        <Link to="/deletetags" className="tagLinky">
-          Delete Tags
-        </Link>
-      </header>
-      <section>
+    <div className="page">
+      <div className="page-header">
+        <div className="page-title-group">
+          <h1>Tags</h1>
+          <span className="count-badge">{tags.length} tags</span>
+        </div>
+        <div className="page-actions">
+          <Link to="/addtags" className="btn btn-primary">+ Add Tag</Link>
+          <Link to="/updatetags" className="btn btn-outline">Update</Link>
+          <Link to="/deletetags" className="btn btn-danger">Delete</Link>
+        </div>
+      </div>
+      <div className="tags-grid">
         {tags.map((tag) => (
-          <div key={tag._id}>
-            <img src={tag.image} className="tag-img"></img>
-            <h2>{tag.name}</h2>
+          <div key={tag._id} className="tag-manage-card">
+            <img src={tag.image} alt={tag.name} />
+            <h3>{tag.name}</h3>
           </div>
         ))}
-      </section>
+      </div>
     </div>
   )
 }

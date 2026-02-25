@@ -1,385 +1,778 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
-.App {
-  text-align: center;
+:root {
+  --bg: #fafafa;
+  --surface: #ffffff;
+  --border: #e8e8e8;
+  --text: #1a1a1a;
+  --text-muted: #6b7280;
+  --accent: #361656;
+  --accent-light: #f3eef8;
+  --gold: #e09f3e;
+  --radius: 12px;
+  --shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  --shadow-hover: 0 6px 24px rgba(0, 0, 0, 0.14);
 }
-.App-header {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  background-image: url("https://i.imgur.com/AcZDktr.jpg");
-  background-repeat: none;
-  background-size: cover;
-  background-blend-mode: darken;
-  color: whitesmoke;
-  object-position: center center;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.6;
 }
 
+h1, h2, h3, h4, h5 {
+  font-family: 'Inter', sans-serif;
+  text-shadow: none;
+  text-transform: none;
+  color: var(--text);
+}
+
+/* ---- NAV ---- */
 .navbar {
-  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 0 2rem;
+  height: 64px;
+  display: flex;
   align-items: center;
- font-size: 12px;
-  padding: 3em;
-  color: white;
-  min-height: 2em;
-    font-family: 'Roboto', sans-serif;
-  
+  justify-content: space-between;
 }
 
-.navbar a {
+.nav-logo {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--accent);
   text-decoration: none;
-  position: center;
-  color: white;
-  padding-left: 20px;
-  margin-left: 0.5em;
-  margin-right: 0.5em;
-  font-size: 20px;
-  font-weight: 400;
-  letter-spacing: 0.5px;
-  padding: 10 15px;
-  justify-content: center;
-  object-position: center center;
+  letter-spacing: -0.3px;
+  white-space: nowrap;
 }
 
-.linky::after {
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.navLinky {
+  text-decoration: none;
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  transition: background 0.15s, color 0.15s;
+}
+
+.navLinky:hover,
+.navLinky.active {
+  background: var(--accent-light);
+  color: var(--accent);
+}
+
+.nav-hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  color: var(--text);
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+/* ---- PAGE LAYOUT ---- */
+.page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+/* ---- HERO ---- */
+.hero {
+  text-align: center;
+  padding: 4rem 1.5rem 3rem;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 2rem;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: -0.5px;
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  margin-bottom: 1.75rem;
+}
+
+/* ---- SEARCH (Hero) ---- */
+.search-form {
+  display: flex;
+  max-width: 480px;
+  margin: 0 auto;
+  gap: 0.5rem;
+}
+
+.search-input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 0.95rem;
+  font-family: inherit;
+  background: var(--bg);
+  transition: border-color 0.15s;
+  outline: none;
+}
+
+.search-input:focus {
+  border-color: var(--accent);
+}
+
+.search-btn {
+  padding: 0.75rem 1.25rem;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 0.95rem;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+.search-btn:hover {
+  opacity: 0.88;
+}
+
+/* ---- BROWSE GENRES (Home) ---- */
+.section-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--text-muted);
+  text-align: center;
+  margin-bottom: 1.75rem;
+}
+
+.tag-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.75rem;
+}
+
+.tag-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--text);
+  transition: transform 0.15s;
+}
+
+.tag-card:hover {
+  transform: translateY(-4px);
+}
+
+.tag-img {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: var(--shadow);
+  border: 3px solid var(--border);
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.tag-card:hover .tag-img {
+  border-color: var(--accent);
+  box-shadow: var(--shadow-hover);
+}
+
+.tag-card-name {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text);
+  text-align: center;
+}
+
+/* ---- PAGE HEADER ---- */
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.75rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.page-header h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.page-title-group {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.count-badge {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  background: var(--accent-light);
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+.page-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+/* ---- SONGS SEARCH (inline) ---- */
+.songs-search {
+  padding: 0.575rem 1rem;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 0.875rem;
+  font-family: inherit;
+  background: var(--surface);
+  transition: border-color 0.15s;
+  outline: none;
+  width: 240px;
+}
+
+.songs-search:focus {
+  border-color: var(--accent);
+}
+
+/* ---- SONG CARDS ---- */
+.song-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
+.song-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  box-shadow: var(--shadow);
+  transition: box-shadow 0.15s, transform 0.15s;
+}
+
+.song-card:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-2px);
+}
+
+.song-card h3 {
+  font-size: 0.975rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.2rem;
+}
+
+.song-card .composer {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+}
+
+.song-player {
+  margin-top: 0.75rem;
+}
+
+/* ---- BUTTONS ---- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s, border-color 0.15s, opacity 0.15s;
+  border: 1.5px solid transparent;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: white;
+}
+
+.btn-primary:hover {
+  opacity: 0.88;
+}
+
+.btn-outline {
+  background: transparent;
+  border-color: var(--border);
+  color: var(--text-muted);
+}
+
+.btn-outline:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-light);
+}
+
+.btn-danger {
+  background: transparent;
+  border-color: #fecaca;
+  color: #dc2626;
+}
+
+.btn-danger:hover {
+  background: #fee2e2;
+}
+
+/* ---- TAG DETAIL HEADER ---- */
+.tag-detail-hero {
+  padding: 2.5rem 1.5rem 2rem;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+  margin-bottom: 2rem;
+}
+
+.tag-detail-hero h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  text-decoration: none;
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  margin-bottom: 0.75rem;
+  transition: color 0.15s;
+}
+
+.back-link:hover {
+  color: var(--accent);
+}
+
+/* ---- FILMS HUB ---- */
+.films-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.films-header h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.film-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.film-card {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  text-decoration: none;
+  display: block;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.film-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+.film-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.film-card-overlay {
   position: absolute;
-  content: " ";
-  background-color: #e09f3e;
-  width: 75%;
-  height: 5px;
-  left: 9px;
-  bottom: -5px;
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 250ms ease-in;
-}
-
-.linky:hover::after {
-  transform: scaleX(1);
-}
-
-.delete-btn{
-  padding: 4px 8px;
-  background: #f2e9e4;
-  color: black;
-  border: none;
-  border-radius: 7px;
-  cursor: pointer;
-  font-size: 12px;
-}
-
-.delete-btn:hover{
-  background-color: gray;
-  transition: 0.1s;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, transparent 100%);
   color: white;
-  }
-
-.update-btn{
-  padding: 4px 8px;
-  background: #f2e9e4;
-  color: black;
-  border: none;
-  border-radius: 7px;
-  cursor: pointer;
-  font-size: 12px;
-  }
-  
-.update-btn:hover{
-  background-color: gray;
-  transition: 0.1s;
-  color: white;
-    }
-    
-
-.add-btn{
-  padding: 4px 8px;
-  background: #f2e9e4;
-  color: black;
-  border: none;
-  border-radius: 7px;
-  cursor: pointer;
-  font-size: 12px;
-    }
-    
-.add-btn:hover{
-  background-color: gray;
-  transition: 0.1s;
-  color: white;
-      }
-
-.add-tag-btn{
-  padding: 4px 8px;
-  background: #f2e9e4;
-  color: black;
-  border: none;
-  border-radius: 7px;
-  cursor: pointer;
-  font-size: 12px;
-      }
-      
-.add-tag-btn:hover{
-  background-color: gray;
-  transition: 0.1s;
-  color: white;
-        }
-
-.link-btn{
-  padding: 4px 8px;
-  background: #f2e9e4;
-  color: black;
-  border: none;
-  border-radius: 7px;
-  cursor: pointer;
-  font-size: 12px;
-}
-.link-btn:hover{
-  background-color: gray;
-  transition: 0.01s;
-  color: white;
-        }
-
-.logo{
-  max-width: 380px;
-  min-width: 200px;
-  margin: 0px 0px 0px 00px;
-  padding: 0px 0px 10px 0px;
-  justify-content: center;
-  object-fit: contain;
 }
 
-.tagBox{
+.film-card-genre {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--gold);
+  margin-bottom: 0.2rem;
+}
+
+.film-card-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+/* ---- FILM DETAIL PAGE ---- */
+.film-detail-header {
+  margin-bottom: 1.75rem;
+}
+
+.film-detail-header h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 0.5rem;
+}
+
+.film-detail-layout {
+  display: grid;
+  grid-template-columns: 55fr 45fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.film-video-col {
+  position: sticky;
+  top: 80px;
+}
+
+.film-video-wrapper {
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  aspect-ratio: 16 / 9;
+}
+
+.film-video-wrapper > div {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.film-songs-col {
+  overflow-y: auto;
+  max-height: calc(100vh - 120px);
+}
+
+.film-songs-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.film-song-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.875rem 1rem;
+  margin-bottom: 0.75rem;
+  box-shadow: var(--shadow);
+}
+
+.film-song-card h3 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+
+.film-song-card .composer {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+
+/* ---- COMPOSERS ---- */
+.composer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1.25rem;
+}
+
+.composer-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem 1rem;
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: box-shadow 0.15s, transform 0.15s;
+}
+
+.composer-card:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-2px);
+}
+
+.composer-photo {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--border);
+  margin-bottom: 0.75rem;
+}
+
+.composer-photo-placeholder {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: var(--accent-light);
   display: flex;
-  justify-content: center;
-  padding: 20px; 
-  width: 200px;
-  justify-items: center;
-}
-
-.songDiv{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  justify-items: center;
-  height: 200px;
-  width: auto;
-  overflow: auto;
-  padding-bottom: 30px;
-  border-top: #f2e9e4;
-}
-
-.songDivAll{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  justify-items: center;
-  width: auto;
-  padding-bottom: 30px;
-  border-top: #f2e9e4;
-}
-
-.songBox{
-  max-width: 300px;
-  padding: 0px 10px 0px 10px;
-}
-
-.songBoxAll{
-  max-width: 300px;
-  padding: 0px 20px 0px 20px;
-}
-
-.tagBox:hover{
-  opacity: 10;
-}
-
-.tag-img{
-  max-width: 200px;
-  max-height: 200px;
-  border-radius: 10%;
-  box-shadow: 7px 9px 3px black;
-  flex-wrap: wrap;
-}
-
-.composerPhoto{
-  max-width: 150px;
-  border-radius: 15%;
-  box-shadow: 5px 8px 5px black;
-}
-
-.tagDivide{
-  height: 50vh;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-start;
-}
-
-.tagLinky{
-   justify-content: space-between;
-   align-items: center;
-  font-size: px;
-   padding: 5px;
-   color: white;
-   min-height: 2em;
-  text-decoration: none;
-  position: center;
-  color: white;
-  font-size: 20px;
-  font-weight: 400;
-  letter-spacing: 0.5px;
-  justify-content: center;
-  object-position: center center;
-    font-family: 'Roboto', sans-serif;
-
-}
-.tagLinkyFilm{
-  color: white;
- text-decoration: none;
- position: center;
- color: white;
- font-size: 20px;
- font-weight: 400;
- letter-spacing: 0.5px;
- justify-content: center;
- object-position: center center;
-}
-
-.tagHeader{
-  padding: 0px 0px 30px 0px;
-  border: 2px;
-}
-
-.soundcloudPlayer{
-padding: 10px 0px 0px 0px;
-box-shadow: 7px 9px 3px black;
-
-}
-
-.soundcloudPlayerFilm{
-  display: flex;
-  padding: 10px 10px 10px 10px;
-  }
-
-.container-grid{
-  height: 60vh;
-  min-height: 60vh;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.filmPage{
-display: flex;
-justify-content: center;
-
-}
-
-.filmPlayer{
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-.songList{
-  flex-wrap: wrap;
-  padding: 10px 10px 10px 10px;
-}
-
-.mediaPlayerBox{
-  display: flex;
-  justify-content: center;
-  object-fit: scale-down;
-}
-
-.filmDiv{
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.film-img{
-  max-width: 300px;
-  max-height: 200px;
-  border-radius: 5%;
-  border-radius: 10%;
-  box-shadow: 7px 9px 3px black;
-}
-
-.tagLinkyHome{
-  display: flex;
-  justify-content: space-between;
   align-items: center;
- font-size: px;
-  padding: 2em;
-  color: white;
-  min-height: 1em;
- text-decoration: none;
- position: center;
- color: white;
- font-size: 20px;
- font-weight: 400;
- letter-spacing: 0.5px;
- justify-content: center;
- object-position: center center;
+  justify-content: center;
+  font-size: 1.75rem;
+  margin: 0 auto 0.75rem;
+  border: 3px solid var(--border);
 }
 
-.songList{
-  list-style-type: none; 
-  padding: 0; 
-  margin: 0; 
-}
-
-.tag-title{
-  font-size: 70px;
+.composer-card h3 {
+  font-size: 0.975rem;
   font-weight: 600;
-  font-family: 'Roboto', sans-serif;
-  color: #b393d3;
-  text-transform: uppercase;
+  margin-bottom: 0.375rem;
 }
 
-.tagLink{
-  font-size: 30px;
+.pro-badge {
+  display: inline-block;
+  font-size: 0.72rem;
   font-weight: 600;
-  font-family: 'Roboto', sans-serif;
-  color: #ffffff;
-  text-transform: uppercase;
+  color: var(--accent);
+  background: var(--accent-light);
+  padding: 0.2rem 0.6rem;
+  border-radius: 20px;
 }
 
+/* ---- TAGS MANAGEMENT ---- */
+.tags-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1rem;
+}
 
+.tag-manage-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem;
+  text-align: center;
+  box-shadow: var(--shadow);
+}
 
-h1{
-  font-size: 50px;
+.tag-manage-card img {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 0.5rem;
+  border: 2px solid var(--border);
+}
+
+.tag-manage-card h3 {
+  font-size: 0.875rem;
   font-weight: 600;
-  font-family: 'Roboto', sans-serif;
-  color: #ffffff;
-  text-transform: uppercase;
-  text-shadow: 1px 1px 0px #361656,
-  1px 2px 0px #361656,
-  1px 3px 0px #361656,
-  1px 4px 0px #361656,
-  1px 5px 0px #361656,
-  1px 6px 0px #361656,
-  1px 10px 5px rgba(16, 16, 16, 0.5),
-  1px 15px 10px rgba(16, 16, 16, 0.4),
-  1px 20px 30px rgba(16, 16, 16, 0.3),
-  1px 25px 50px rgba(16, 16, 16, 0.2);
 }
 
-h2{
-  font-family: 'Roboto', sans-serif;
+/* ---- FORMS ---- */
+.form-page {
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
 }
 
-h3{
-  font-family: 'Roboto', sans-serif;
+.form-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 2rem;
+  box-shadow: var(--shadow);
 }
 
-.homeSubHeader{
-  font-size: 30px;
+.form-card h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+  color: var(--accent);
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 500;
+  margin-bottom: 0.375rem;
+  color: var(--text-muted);
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 0.625rem 0.875rem;
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-family: inherit;
+  background: var(--bg);
+  transition: border-color 0.15s;
+  outline: none;
+  color: var(--text);
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: var(--accent);
+}
+
+.form-submit {
+  margin-top: 1.25rem;
+}
+
+/* ---- EXISTING SONGS LIST (in forms) ---- */
+.existing-list {
+  margin-top: 2rem;
+}
+
+.existing-list h3 {
+  font-size: 1rem;
   font-weight: 600;
-  font-family: 'Roboto', sans-serif;
-  color: #ffffff;
-  text-transform: uppercase;
+  margin-bottom: 1rem;
+  color: var(--text-muted);
+}
+
+.existing-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 768px) {
+  .nav-hamburger {
+    display: block;
+  }
+
+  .navLinks {
+    display: none;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    flex-direction: column;
+    padding: 1rem;
+    gap: 0.25rem;
+    box-shadow: var(--shadow);
+  }
+
+  .navLinks.open {
+    display: flex;
+  }
+
+  .navLinky {
+    width: 100%;
+    text-align: left;
+  }
+
+  .navbar {
+    position: relative;
+  }
+
+  .hero h1 {
+    font-size: 1.75rem;
+  }
+
+  .search-form {
+    flex-direction: column;
+  }
+
+  .page-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .songs-search {
+    width: 100%;
+  }
+
+  .film-grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .film-detail-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .film-video-col {
+    position: static;
+  }
+
+  .film-songs-col {
+    max-height: none;
+    overflow-y: visible;
+  }
+}
+
+@media (max-width: 480px) {
+  .page {
+    padding: 1.5rem 1rem;
+  }
+
+  .hero {
+    padding: 2.5rem 1rem 2rem;
+  }
+
+  .song-grid {
+    grid-template-columns: 1fr;
+  }
 }

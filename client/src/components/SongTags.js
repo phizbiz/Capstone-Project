@@ -1,17 +1,12 @@
 import { useEffect, useState } from 'react'
-import { useParams, useNavigate } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 import axios from 'axios'
 import ReactPlayer from 'react-player'
 
 const SongTags = () => {
   const [songs, setSong] = useState([])
-  const [tag, setTag] = useState([])
+  const [tag, setTag] = useState({})
   let { id } = useParams()
-  let navigate = useNavigate()
-
-  const viewSong = (tagdetails) => {
-    navigate(`/tag/${tagdetails}`)
-  }
 
   useEffect(() => {
     const apiCall = async () => {
@@ -29,34 +24,26 @@ const SongTags = () => {
     apiCall()
   }, [id])
 
-  console.log(SongTags)
-
   return (
     <div>
-      <nav>
+      <div className="tag-detail-hero">
+        <Link to="/" className="back-link">← Back to genres</Link>
         <h1>{tag.name}</h1>
-      </nav>
-      <section className="container-grid">
-        <ul className="songList">
-          <li>
-            {songs.map((song) => (
-              <div key={song._id} className="songBoxAll">
-                <h2>{song.name}</h2>
-
-                <h4>Composer: {song.composer}</h4>
-                <div className="mediaPlayerBox">
-                  <ReactPlayer
-                    url={song.url}
-                    className="soundcloudPlayer"
-                    width="100%"
-                    height="50%"
-                  />
-                </div>
+        <p style={{ color: 'var(--text-muted)', marginTop: '0.5rem' }}>{songs.length} songs</p>
+      </div>
+      <div className="page">
+        <div className="song-grid">
+          {songs.map((song) => (
+            <div key={song._id} className="song-card">
+              <h3>{song.name}</h3>
+              {song.composer && <p className="composer">{song.composer}</p>}
+              <div className="song-player">
+                <ReactPlayer url={song.url} width="100%" height="80px" />
               </div>
-            ))}
-          </li>
-        </ul>
-      </section>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   )
 }

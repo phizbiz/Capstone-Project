@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
-import link from 'react-router-dom'
 
 const Composers = () => {
   const [composers, updateComposers] = useState([])
@@ -14,21 +13,26 @@ const Composers = () => {
   }, [])
 
   return (
-    <div className="Composers">
-      <header>
-        <h1>Composers</h1>
-      </header>
-      <section>
+    <div className="page">
+      <div className="page-header">
+        <div className="page-title-group">
+          <h1>Composers</h1>
+          <span className="count-badge">{composers.length} composers</span>
+        </div>
+      </div>
+      <div className="composer-grid">
         {composers.map((composer) => (
-          <div key={composer._id}>
-            <img src={composer.image} className="composerPhoto"></img>
-            <h2>{composer.name}</h2>
-            <h5>
-              <i>ASCAP: {composer.pro}</i>
-            </h5>
+          <div key={composer._id} className="composer-card">
+            {composer.image ? (
+              <img src={composer.image} className="composer-photo" alt={composer.name} />
+            ) : (
+              <div className="composer-photo-placeholder">🎼</div>
+            )}
+            <h3>{composer.name}</h3>
+            {composer.pro && <span className="pro-badge">{composer.pro}</span>}
           </div>
         ))}
-      </section>
+      </div>
     </div>
   )
 }

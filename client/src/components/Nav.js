@@ -1,24 +1,34 @@
-import { Link } from 'react-router-dom'
+import { useState } from 'react'
+import { NavLink } from 'react-router-dom'
 
 const Nav = () => {
+  const [isOpen, setIsOpen] = useState(false)
+  const close = () => setIsOpen(false)
+
   return (
     <nav className="navbar">
-      <div className="navLinks">
-        <Link to="/" className="navLinky">
+      <NavLink to="/" className="nav-logo" onClick={close}>
+        🎵 Royal Music Library
+      </NavLink>
+      <button className="nav-hamburger" onClick={() => setIsOpen(!isOpen)}>
+        {isOpen ? '✕' : '☰'}
+      </button>
+      <div className={`navLinks${isOpen ? ' open' : ''}`}>
+        <NavLink to="/" end className={({ isActive }) => `navLinky${isActive ? ' active' : ''}`} onClick={close}>
           Home
-        </Link>
-        <Link to="/songs" className="navLinky">
+        </NavLink>
+        <NavLink to="/songs" className={({ isActive }) => `navLinky${isActive ? ' active' : ''}`} onClick={close}>
           All Songs
-        </Link>
-        <Link to="/composers" className="navLinky">
+        </NavLink>
+        <NavLink to="/composers" className={({ isActive }) => `navLinky${isActive ? ' active' : ''}`} onClick={close}>
           Composers
-        </Link>
-        <Link to="/tags" className="navLinky">
+        </NavLink>
+        <NavLink to="/tags" className={({ isActive }) => `navLinky${isActive ? ' active' : ''}`} onClick={close}>
           Tags
-        </Link>
-        <Link to="/films" className="navLinky">
+        </NavLink>
+        <NavLink to="/films" className={({ isActive }) => `navLinky${isActive ? ' active' : ''}`} onClick={close}>
           Pair With Film
-        </Link>
+        </NavLink>
       </div>
     </nav>
   )
